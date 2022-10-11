@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: rgb(255,255,255);
+    /* border: 2px dotted powderblue; */
+}
+
+/* ------------------------HEADER--------------------------------------- */
+.navbarsz{ 
+    display: flex; 
+    justify-content:space-around;
+    align-items: center;
+    /* border: 2px dotted red; */
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px grey;
+    width: 100%;
+}
+
+.navbarsz > .navsz1{
+display: flex; 
+justify-content:space-around;
+align-items: center;
+width: 15%;
+}
+
+.navbarsz > .navsz2{
+width: 50%;
+}
+
+.navbarsz > .navsz3{
+display: flex; 
+justify-content:space-around;
+align-items: center;
+width: 35%;
+}
+
+.navbarsz > div > span:hover{
+cursor: pointer;
+color:RGB(86, 36, 208);
+} 
+
+
+
+
+#imgslogo1{
+    width: 90px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+#searchIcon{
+    font-size: 24px;
+    position: absolute;
+    z-index: 3;
+    margin-left: 50px;
+    margin-top: 12px;
+    color: rgb(100, 100, 100);
+    
+}
+
+#search{
+    position: relative;
+    z-index: 2;
+
+    background-color: rgb(247,249,250);
+    height: 50px;
+    border-radius: 100px;
+    
+    padding-left: 55px;
+    border: 1px solid black;
+
+    font-size: 14px;
+    line-height: 19.6px;
+    font-weight: 400;
+
+    width: 90%;
+    margin-right: 5px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+
+
+#search:focus{
+    background-color: rgb(247,249,250);
+    font-size: 14px;
+}
+
+#sz4{
+border: 1px solid black;
+padding: 8px 17px;
+font-weight: 600;
+}
+#sz4:hover{
+background-color: rgb(247,249,250);
+color: black;
+}
+
+#sz5{
+border: 1px solid black;
+padding: 8px 17px;
+background-color: black;
+color: white;
+font-weight: 600;
+}
+
+#sz6{
+border: 1px solid black;
+padding: 5px 6px;
+}
+#sz6:hover{
+background-color: rgb(247,249,250);
+color: black;
+}
+
+.navbarsz2{
+    display: none;
+}
+
+/* ----------------xxx--------HEADER----------------------xxx----------------- */
+
+
+
+
+
+/*-----------------------------------------Footer----------------------------------------------- */
+
+.footersiz1{
+background-color: rgb(28,29,31);
+color: white;
+display: grid;
+grid-template-rows: repeat(2, 1fr);
+padding: 35px 0 0 0;
+/* border: 3px dotted rgb(254, 80, 0); */
+}
+
+.footbox1 {
+    /* background-color: rgba(240, 255, 255, 0.336); */
+    display: flex;
+    justify-content:space-evenly;
+    padding-bottom: 50px;
+}
+.footbox1 >div > span {
+    display: block;
+    padding: 5px;
+    /* border: 1px dotted yellow; */
+}
+.footbox1 >div > span:hover{
+text-decoration: underline;
+cursor: pointer;
+
+}
+
+#langsz1{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border: 1px solid white;
+    height: 40px;
+    padding: 8px 20px;
+}
+
+.footbox1>#langsz1:hover{
+background-color: rgba(139, 174, 191, 0.182);
+}  
+.footbox1 >#langsz1 > span:hover{
+text-decoration: none;
+}  
+
+
+
+
+.footbox2{
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding: 0px 200px;
+/* background-color: blueviolet; */
+}
+
+
+.footbox2 > div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#copy1{
+    font-size: 14px;
+}
+
+/*---------------xxxx----------------------Footer---------------------xxxxxx-------------------- */
+
+
+/*  
+FONT-FAMILY:---------
+font-family: SuisseWorks, Georgia, Times, "times new roman", serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+
+BACKGROUND-COLOR:-------
+
+*/
+
+/* RESPONSIVE------------------------------------------------------------------------------------------------------- */
+
+/* NAVBAR-----------HEADER--------------------------------------------- */
+/* normal  15 50 35 */
+
+@media all and (min-width:1050px) and (max-width: 1370px) {
+
+    .navbarsz > .navsz1{
+        width: 15%;
+    }
+
+    .navbarsz > .navsz2{
+        width: 40%;
+    }
+
+    .navbarsz > .navsz3{
+        width: 45%;
+    }
+
+}
+
+@media all and (min-width:970px) and (max-width: 1050px) {
+
+    .navbarsz > .navsz1{
+        width: 15%;
+    }
+
+    .navbarsz > .navsz2{
+        width: 45%;
+    }
+
+    .navbarsz > .navsz3{
+        width: 40%;
+    }
+
+    #imgslogo1{
+        margin-left: 20px;
+    }
+
+    #sz-7{
+        display: none;
+    }
+
+}
+
+@media all and (min-width:820px) and (max-width: 970px) {
+
+    .navbarsz > .navsz1{
+        width: 20%;
+    }
+
+    .navbarsz > .navsz2{
+        width: 50%;
+    }
+
+    .navbarsz > .navsz3{
+        width: 30%;
+    }
+
+    #imgslogo1{
+        margin-left: 20px;
+    }
+
+    #sz-7{
+        display: none;
+    }
+
+    #sz-8{
+        display: none;
+    }
+
+}
+
+@media all and (max-width:820px) {
+
+    .navbarsz{
+        display: none;
+    }
+
+    .navbarsz2{
+    display: flex; 
+    justify-content:space-between;
+    align-items: center;
+    /* border: 2px dotted red; */
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px grey;
+    width: 100%;
+    }
+
+    .navbarsz2 > div {
+        cursor: pointer;
+    }
+
+}
+/* NAVBAR------------------HEADER---------------------------------- */
