@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#productDesc {
+    background-color: #1c1d1f;
+    width: 1519px;
+    height: 295px;
+    padding: 32px;
+}
+
+#prevPrice {
+    position: absolute;
+    top: 35px;
+    left: 1000px;
+    /* right: 50px; */
+}
+
+.previewBox {
+    width: 340px;
+    height: 190px;
+    background-color: aqua;
+}
+
+.priceDesc {
+    width: 340px;
+    height: 548px;
+    background-color: aliceblue;
+}
+
+.business {
+    width: 340px;
+    height: 166px;
+    background-color:bisque;
+}
+
+#courseContent {
+    position: absolute;
+    left: 200px;
+    bottom: 10px;
+    width: 700px;
+    height: 355px;
+    background-color: antiquewhite;
+}
