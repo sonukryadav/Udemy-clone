@@ -1,46 +1,156 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
 }
+
+/*   Product Description   */
 
 #productDesc {
-    background-color: #1c1d1f;
-    width: 1519px;
-    height: 295px;
-    padding: 32px;
+  background-color: #1c1d1f;
+  width: 1519px;
+  height: 295px;
+  padding: 32px;
+  color: white;
 }
 
+/*   Price Description in the side   */
+
 #prevPrice {
-    position: absolute;
-    top: 35px;
-    left: 1000px;
-    /* right: 50px; */
+  position: absolute;
+  top: 35px;
+  left: 960px;
+  /* right: 50px; */
 }
 
 .previewBox {
-    width: 340px;
-    height: 190px;
-    background-color: aqua;
+  width: 340px;
+  height: 190px;
+  background-color: aqua;
 }
 
 .priceDesc {
-    width: 340px;
-    height: 548px;
-    background-color: aliceblue;
+  width: 340px;
+  height: 548px;
+  background-color: aliceblue;
 }
 
 .business {
-    width: 340px;
-    height: 166px;
-    background-color:bisque;
+  width: 340px;
+  height: 166px;
+  background-color: bisque;
 }
 
-#courseContent {
-    position: absolute;
-    left: 200px;
-    bottom: 10px;
+
+/*   Course Contents */
+
+#content {
+    width: 1185px;
+    height: 8110px;
+    background-color: beige;
+    margin: 0 168px 0 168px;
+    padding: 32px 0 0 0;
+}
+
+.learningContent, .companies {
+  /* position: absolute; */
+  /* left: 200px; */
+  /* bottom: 10px; */
+  width: 700px;
+  /* height: 355px; */
+  margin: 0 0 32px 20px;
+  padding: 24px 0 16px 20px;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  /* max-height:fit-content; */
+  /* max-height: fit-content; */
+  /* transform: scale(1, 1.5); */
+
+}
+
+.parentDesc {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+
+    /* max-height: max-content; */
+}
+
+
+.description {
+    /* width: 50%; */
+    margin-top: 8px;
+    display: flex;
+}
+
+.desc {
+    /* width: 20px;
+    height: 24px; */
+    /* border: 1px solid black; */
+    width: 80%;
+    /* display: inline; */
+}
+
+.tick-sign{
+    /* display: inline; */
+    line-height: 20px;
+    font-size: 14px;
+    /* text-align: left; */
+    width: 10%;
+}
+
+.seeMoreBtn, .showLess {
+    padding: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: #5725d0;
+    font-weight: 600;
+
+}
+
+.showLess {
+    display: none;
+}
+
+.hiddenParent {
+    display: none;
+}
+
+/* .companies {
+    border: 1px solid black;
     width: 700px;
-    height: 355px;
-    background-color: antiquewhite;
+} */
+.companies > p {
+    font-size: 14px;
+    padding-right: 10px;
+    line-height: 20px;
+}
+
+.compImg {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+/* .hiddenFirst, .hiddenSecond {
+    
+} */
+
+.courseContent {
+    padding: 0 32px 0 24px;
+}
+
+.length {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin-top: 20px;
 }
