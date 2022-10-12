@@ -1,0 +1,37 @@
+#emptyCartbox{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    width: 60%;
+    height: 330px;
+    margin-left: 80px;
+}
+#emptyCartbox img{
+    display: block;
+    margin: auto;
+}
+#emptyCartbox p{
+    text-align: center;
+    font-weight: 400;
+    font-size: larger;
+}
+#emptyCartbox button{
+    display: block;
+    margin: auto;
+    padding: 16px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(164,53,240);
+    color: white;
+    margin-top: 15px;
+}
+#emptyCart p{
+font-family: Arial, Helvetica, sans-serif;
+font-size: large;
+margin-left: 80px;
+margin-bottom: -0.25px;
+}
+#cartheading{
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
