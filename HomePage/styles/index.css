@@ -6,7 +6,13 @@
 body{
 
     background-color: rgb(255,255,255);
+    width: 100%;
     /* border: 2px dotted powderblue; */
+}
+
+a{
+    text-decoration: none;
+    color:black;
 }
 
 /* ------------------------HEADER--------------------------------------- */
@@ -38,7 +44,7 @@ align-items: center;
 width: 35%;
 }
 
-.navbarsz > div > span:hover{
+.navbarsz > div > a>span:hover{
 cursor: pointer;
 color:RGB(86, 36, 208);
 } 
@@ -95,8 +101,9 @@ border: 1px solid black;
 padding: 8px 17px;
 font-weight: 600;
 }
+
 #sz4:hover{
-background-color: rgb(247,249,250);
+background-color: rgba(236, 236, 236, 0.803);
 color: black;
 }
 
@@ -113,7 +120,7 @@ border: 1px solid black;
 padding: 5px 6px;
 }
 #sz6:hover{
-background-color: rgb(247,249,250);
+background-color: rgba(236, 236, 236, 0.803);
 color: black;
 }
 
@@ -125,6 +132,267 @@ color: black;
 
 
 
+/*----------------------------------Mid section content--------------- */
+
+/* main div for mid content */
+.Contentsn1{
+width: 100%;
+height: fit-content;
+}
+
+/* ----------------------------------------------------- */
+
+/* 1 */
+.consn2{
+    /* border: 2px dotted rgb(255, 0, 200); */
+    width: 86%;
+    margin: auto;
+}
+
+.consn3{
+position: absolute;
+z-index: 1;
+padding:25px;
+margin: -325px 0 0px 50px;
+width: 30%;
+/* border: 2px dotted rgb(0, 153, 13); */
+box-shadow: 1px 1px 7px grey;
+background-color: white;
+}
+
+#sn3{
+/* border: 1px dotted rgb(207, 20, 20); */
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+color: #1c1d1f;
+font-family: SuisseWorks, Georgia, Times, "times new roman", serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+}
+
+#sn4{
+/* border: 1px dotted rgb(20, 219, 33); */
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+color: #1c1d1f;
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+}
+
+
+#sn5{
+width: 100%;
+position: relative;
+z-index: -1;
+/* border: 1px dotted rgb(255, 221, 0); */
+overflow: hidden;
+
+}
+
+
+/* ----------------------------------- */
+/* 2 */
+.consn5{
+    width: 86%;
+    /* border: 3px solid powderblue; */
+    padding: 50px 0 0 0;
+    margin: auto;
+}
+
+#ae1{
+font-size: 32px;
+font-weight: 700;
+color: #1c1d1f;
+line-height: 40px;
+font-family: SuisseWorks, Georgia, Times, "times new roman", serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 15px;
+}
+
+#ae2{
+font-size: 19px;
+font-weight: 400;
+color: #1c1d1f;
+line-height: 17px;
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 15px;
+}
+
+#ae3{
+    /* border: 2px dotted red; */
+    margin-bottom: 10px;
+    width: 100%;
+    /* height: 24px;
+    overflow: hidden; */
+}
+
+#ae3 > span{
+font-size: 16px;
+font-weight: 700;
+color: #64666b;
+line-height: 19px;
+padding: 0 10px 0 5px;
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 15px;
+cursor: pointer;
+}
+
+#ae3 > span:hover{
+    color: black;
+}
+#ae3 > #jpy{
+    color: black;
+}
+
+/* #ae3i{
+    position: relative;
+    z-index: 1;
+    float: right;
+    margin-top: -25px;
+    color: blue;
+} */
+
+.aex4{
+    border: 1px solid rgba(151, 151, 151, 0.867);
+    padding: 25px;
+}
+
+#ae4{
+font-size: 24px;
+font-weight: 700;
+color: #1c1d1f;
+line-height: 29px;
+/* padding: 0 10px 0 5px; */
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 10px;
+}
+
+#ae5{
+font-size: 16px;
+font-weight: 400;
+color:#0c0c0c;
+line-height: 22px;
+/* padding: 0 10px 0 5px; */
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 18px;
+width: 64%;
+}
+
+#ae6{
+    
+}
+
+#ae7{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px 5px 10px 5px;
+    background-color: white;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+#ae8{
+    
+    width: 100%;
+    background-color: #1c1d1f37;
+    height: 250px;
+    /*.......................Added.........................  */
+}
+
+/* 3 */
+.consn6{
+    width: 86%;
+    margin: auto;
+    margin-top: 65px;
+}
+
+#ae9{
+font-size: 24px;
+font-weight: 700;
+color: #1c1d1f;
+line-height: 29px;
+/* padding: 0 10px 0 5px; */
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 18px;
+}
+
+#ae10{
+    width: 100%;
+    background-color: #1c1d1f3d;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+
+/* 4 */
+.consn7{
+    width: 100%;
+    margin: auto;
+    background-color: rgb(247,249,250);
+    padding: 20px 105px 20px 105px;
+    margin-top: 100px;
+}
+
+.ae11{
+
+}
+
+#ae12{
+font-size: 24px;
+font-weight: 700;
+color: #1c1d1f;
+line-height: 29px;
+/* padding: 0 10px 0 5px; */
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 18px;
+}
+
+#ae13{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+#ae13 > span{
+font-size: 19px;
+font-weight: 700;
+color: #1c1d1f;
+line-height: 23px;
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 25px;
+}
+
+.ae14{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+.ae14 > div > a > span{
+display: block;
+font-size: 16px;
+font-weight: 700;
+color: #1c1d1f;
+line-height: 22px;
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 10px;
+color: #5426c8;
+text-decoration: underline;
+}
+
+.ae14 > div > a > span:hover{
+    color: #401b9c;
+}
+
+.ae14 > div >span{
+display: block;
+font-size: 14px;
+font-weight: 400;
+color: #6a6f73;
+line-height: 20px;
+font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+margin-bottom: 25px;
+}
+
+/*------------xxx-------------------Mid section content-------xxx----- */
+
+
 
 
 /*-----------------------------------------Footer----------------------------------------------- */
@@ -132,27 +400,31 @@ color: black;
 .footersiz1{
 background-color: rgb(28,29,31);
 color: white;
-display: grid;
-grid-template-rows: repeat(2, 1fr);
-padding: 35px 0 0 0;
 /* border: 3px dotted rgb(254, 80, 0); */
+padding: 25px 40px 25px 40px;
+overflow: hidden;
+width: 100%;
 }
 
 .footbox1 {
     /* background-color: rgba(240, 255, 255, 0.336); */
     display: flex;
-    justify-content:space-evenly;
-    padding-bottom: 50px;
+    justify-content:space-between;
+    padding: 0 0 50px 0;
+    /* border: 2px dotted green; */
 }
-.footbox1 >div > span {
+.footbox1 > div > a >  span {
     display: block;
-    padding: 5px;
+    padding: 6px;
+    color: white;
+    /* margin-right: 50px; */
     /* border: 1px dotted yellow; */
 }
-.footbox1 >div > span:hover{
+
+
+.footbox1 >div > a> span:hover{
 text-decoration: underline;
 cursor: pointer;
-
 }
 
 #langsz1{
@@ -162,6 +434,10 @@ cursor: pointer;
     border: 1px solid white;
     height: 40px;
     padding: 8px 20px;
+}
+
+#go1{
+    margin-right: 8px;
 }
 
 .footbox1>#langsz1:hover{
@@ -178,8 +454,8 @@ text-decoration: none;
 display: flex;
 justify-content:space-between;
 align-items: center;
-padding: 0px 200px;
-/* background-color: blueviolet; */
+padding: 15px 5px 15px 15px;
+/* border: 1px dotted rgb(221, 9, 9); */
 }
 
 
@@ -300,3 +576,65 @@ BACKGROUND-COLOR:-------
 
 }
 /* NAVBAR------------------HEADER---------------------------------- */
+
+
+@media all and (max-width:1350px) {
+
+    .consn2{
+    /* border: 2px dotted rgb(0, 112, 129); */
+    width: 100%;
+    margin: auto;
+    }
+
+    .consn3{
+        position: absolute;
+        z-index: 1;
+        padding:25px;
+        margin: -320px 0 0px 50px;
+        width: 35%;
+        /* border: 2px dotted rgb(0, 153, 13); */
+        /* box-shadow: 1px 1px 7px grey; */
+        background-color: white;
+    }
+
+}
+
+@media all and (max-width: 1130px) {
+
+       .consn3{
+        margin: -250px 0 0px 50px;
+       }
+
+
+}
+
+@media all and (max-width: 890px) {
+
+            .consn3{
+        position: relative;
+        z-index: 0; 
+        padding:10px;
+        margin: 10px 0 0 0px;
+        width: 100%;
+        /* border: 2px dotted rgb(0, 0, 0); */
+        box-shadow: 0 0 0 gray;
+        }
+
+        #sn3{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: #1c1d1f;
+            font-family: SuisseWorks, Georgia, Times, "times new roman", serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+
+        }
+
+        #sn4{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #1c1d1f;
+            font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Roboto, "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+        }
+
+}
