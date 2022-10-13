@@ -16,10 +16,14 @@ const getdata = () => {
 }
 
 function getlecture(arr) {
+    document.getElementById("product_parent_div").innerHTML = null;
     console.log(arr);
     let count = 0;
     document.getElementById("counts").innerText = arr.length;
     document.getElementById("lecture_name").innerText = "java";
+    let reults = document.createElement("h3");
+    reults.innerText = arr.length + "results";
+    document.getElementById("product_parent_div").append(reults);
     arr.map((elem) => {
         let div = document.createElement("div");
         let div1 = document.createElement("div");
