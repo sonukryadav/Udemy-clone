@@ -5,12 +5,12 @@
 }
 
 #array_length {
-    width: 90%;
+    width: 85%;
     margin: auto;
 }
 
 #whole_body {
-    width: 90%;
+    width: 85%;
     margin: auto;
     display: flex;
     margin-top: 35px;
@@ -20,8 +20,40 @@
     flex: 2;
 }
 
+#filter_products>button,
+#sorting_lectures {
+    margin-left: 6px;
+    padding: 20px;
+    background-color: white;
+    border: 0.5px solid black;
+}
+
+#sorting_lectures {
+    font-size: 15px;
+}
+
+.form>* {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.hr_tag {
+    width: 80%;
+    border: 0.1px solid rgb(237, 233, 233);
+    margin: 25px 0px 25px;
+}
+
+.filter_topic {
+    margin: 30px 0px;
+}
+
 #product_parent_div {
     flex: 7;
+}
+
+#product_parent_div>h3 {
+    text-align: right;
+    margin: 14px 10px 49px 0px;
 }
 
 #product_parent_div>div {
@@ -47,7 +79,7 @@
 }
 
 #image_div img {
-    width: 270px;
+    width: 250px;
 }
 
 #product_parent_div hr {
