@@ -8,21 +8,69 @@
 //     price: 449,
 // }]
 
-const getdata = () => {
-    fetch(`http://localhost:3000/c`)
-        .then((res) => res.json())
-        .then((data) => getlecture(data));
+// url = "https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0";
+localStorage.setItem("element", "c++");
 
+
+const getdata = () => {
+    let x = localStorage.getItem("element");
+    if (x == "java") {
+        fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.java, x));
+    }
+    else if (x == "python") {
+        fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.python, x));
+    }
+    else if (x == "web development") {
+        fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.webdevelopment, x));
+    }
+    else if (x == "javascript") {
+        fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.javascript, x));
+    }
+    else if (x == "html") {
+        fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.html, x));
+    }
+    else if (x == "css") {
+        fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.css, x));
+    }
+    else if (x == "dsa" || x == "data structure and algorithms") {
+        fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.dsa, x));
+    }
+
+    else if (x == "c") {
+        fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.c, x));
+    }
+
+    else if (x == "c++") {
+        fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
+            .then((res) => res.json())
+            .then((data) => getlecture(data.record.cplusplus, x));
+    }
 }
 
-function getlecture(arr) {
+function getlecture(arr, x) {
     document.getElementById("product_parent_div").innerHTML = null;
     console.log(arr);
     let count = 0;
     document.getElementById("counts").innerText = arr.length;
-    document.getElementById("lecture_name").innerText = "java";
+    document.getElementById("lecture_name").innerText = x;
     let reults = document.createElement("h3");
-    reults.innerText = arr.length + "results";
+    reults.innerText = arr.length + " results";
     document.getElementById("product_parent_div").append(reults);
     arr.map((elem) => {
         let div = document.createElement("div");
@@ -39,7 +87,7 @@ function getlecture(arr) {
         let des = document.createElement("p");
         des.innerText = elem.headline;
         let teacher = document.createElement("p");
-        teacher.innerText = elem.visible_instructors[0].display_name;
+        teacher.innerText = elem.visible_instructors[0].title;
         let rating = document.createElement("h4");
         rating.innerText = elem.rating;
         let price = document.createElement("h3");
