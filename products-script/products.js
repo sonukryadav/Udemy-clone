@@ -9,58 +9,105 @@
 // }]
 
 // url = "https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0";
-localStorage.setItem("element", "c++");
+localStorage.setItem("element", "java");
 
 
-const getdata = () => {
-    let x = localStorage.getItem("element");
+const getdata = (x) => {
     if (x == "java") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.java, x));
+            .then((data) => get_price_filter(data.record.java, x));
     }
     else if (x == "python") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.python, x));
+            .then((data) => get_price_filter(data.record.python, x));
     }
     else if (x == "web development") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.webdevelopment, x));
+            .then((data) => get_price_filter(data.record.webdevelopment, x));
     }
     else if (x == "javascript") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.javascript, x));
+            .then((data) => get_price_filter(data.record.javascript, x));
     }
     else if (x == "html") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.html, x));
+            .then((data) => get_price_filter(data.record.html, x));
     }
     else if (x == "css") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.css, x));
+            .then((data) => get_price_filter(data.record.css, x));
     }
     else if (x == "dsa" || x == "data structure and algorithms") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.dsa, x));
+            .then((data) => get_price_filter(data.record.dsa, x));
     }
 
     else if (x == "c") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.c, x));
+            .then((data) => get_price_filter(data.record.c, x));
     }
 
     else if (x == "c++") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
-            .then((data) => getlecture(data.record.cplusplus, x));
+            .then((data) => get_price_filter(data.record.cplusplus, x));
     }
+}
+
+const get_price_filter = (arr, x) => {
+    get_rating_filter(arr, x);
+    let checkboxes = document.querySelectorAll('.checkbox3');
+
+    for (let checkbox of checkboxes) {
+        checkbox.addEventListener('click', function () {
+            if (this.checked == true) {
+                let price = this.value
+                let flag;
+                if (price === "true") {
+                    flag = true;
+                }
+                else {
+                    flag = false;
+                }
+                let newarr = arr.filter(function (elem) {
+                    if (elem.is_paid == flag) {
+                        return elem
+                    }
+                })
+                get_rating_filter(newarr, x);
+            }
+        })
+    }
+
+}
+
+const get_rating_filter = (arr, x) => {
+    getlecture(arr, x);
+    let checkboxes = document.querySelectorAll('.checkbox4');
+
+    for (let checkbox of checkboxes) {
+        checkbox.addEventListener('click', function () {
+            if (this.checked == true) {
+                let rating = this.value
+
+                let newarr = arr.filter(function (elem) {
+                    if (elem.rating <= rating) {
+                        return elem
+                    }
+                })
+                getlecture(newarr, x);
+            }
+        })
+    }
+
 }
 
 function getlecture(arr, x) {
@@ -109,4 +156,17 @@ function getlecture(arr, x) {
     })
 }
 
-getdata();
+let x = localStorage.getItem("element");
+getdata(x);
+
+
+
+let checkboxes = document.querySelectorAll('.checkbox');
+
+for (let checkbox of checkboxes) {
+    checkbox.addEventListener('click', function () {
+        if (this.checked == true) {
+            getdata(this.value);
+        }
+    })
+}
