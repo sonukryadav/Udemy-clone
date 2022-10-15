@@ -2,6 +2,12 @@
   padding: 0px;
   margin: 0px;
 }
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h1, h2 {
+  font-family:SuisseWorks
+}
   
   #header {
           display: flex;
