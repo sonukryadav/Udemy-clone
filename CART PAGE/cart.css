@@ -1,6 +1,6 @@
 #emptyCartbox{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    width: 60%;
+    width: 85%;
     height: 330px;
     margin-left: 80px;
 }
@@ -34,4 +34,8 @@ margin-bottom: -0.25px;
 #cartheading{
     margin-left: 80px;
     margin-bottom: 50px;
+}
+#keepshopping:hover{
+    cursor: pointer;
+    background-color: rgb(151, 13, 243);
 }
