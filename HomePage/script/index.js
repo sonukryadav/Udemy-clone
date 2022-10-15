@@ -510,3 +510,58 @@ document.querySelector(".jii6").addEventListener("mouseout", () => {
 
 
 
+// carousel scripts
+
+let vacl = 1;
+
+(function () {
+    setInterval(function () {
+        if (vacl % 2 == 0) {
+            document.querySelector(".crl2").src = "./images/carousel-single-women-top.jpg";
+            document.querySelector("#crltx1").innerText = "Unlock the power of your people";
+            document.querySelector("#crltx2").innerHTML = `Udemy Business is trusted by 12.5K+ companies around the world. <a href="#" style="color: blue; text - decoration: underline;">Find out what we can do for yours.</a>`;
+            vacl++;
+        }
+        else {
+            document.querySelector(".crl2").src = "./images/carousel-men-women-top.jpg";
+            document.querySelector("#crltx1").innerText = "Learning that gets you";
+            document.querySelector("#crltx2").innerText = "Skills for your present(and your future).Get started with us.";
+            vacl++;
+        }
+    }, 3000)
+})();
+
+document.querySelector("#ppal1").addEventListener("click", () => {
+    // let x1 = "g1";
+    if (vacl % 2 == 0) {
+        document.querySelector(".crl2").src = "./images/carousel-single-women-top.jpg";
+        document.querySelector("#crltx1").innerText = "Unlock the power of your people";
+        document.querySelector("#crltx2").innerHTML = `Udemy Business is trusted by 12.5K+ companies around the world. <a href="#" style="color: blue; text - decoration: underline;">Find out what we can do for yours.</a>`;
+        vacl++;
+    }
+    else {
+        document.querySelector(".crl2").src = "./images/carousel-men-women-top.jpg";
+        document.querySelector("#crltx1").innerText = "Learning that gets you";
+        document.querySelector("#crltx2").innerText = "Skills for your present(and your future).Get started with us.";
+        vacl++;
+    }
+
+})
+    
+document.querySelector("#ppar1").addEventListener("click", () => {
+    if (vacl % 2 == 0) {
+        document.querySelector(".crl2").src = "./images/carousel-single-women-top.jpg";
+        document.querySelector("#crltx1").innerText = "Unlock the power of your people";
+        document.querySelector("#crltx2").innerHTML = `Udemy Business is trusted by 12.5K+ companies around the world. <a href="#" style="color: blue; text - decoration: underline;">Find out what we can do for yours.</a>`;
+        vacl++;
+    }
+    else {
+        document.querySelector(".crl2").src = "./images/carousel-men-women-top.jpg";
+        document.querySelector("#crltx1").innerText = "Learning that gets you";
+        document.querySelector("#crltx2").innerText = "Skills for your present(and your future).Get started with us.";
+        vacl++;
+    }
+});
+
+
+
