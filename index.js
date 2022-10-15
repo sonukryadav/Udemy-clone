@@ -5,6 +5,7 @@ window.hover6 = hover6;
 window.hover5si= hover5si;
 window.hover6si = hover6si;
 window.locate2 = locate2;
+window.home1 = home1;
 
 let array2 = ["Development", "Business", "Finance & Accounting", "IT & Software", "Office Productivity", "Personal Development", "Design", "Marketing", "Lifestyle", "Photography & Video", "Health & Fitness", "Music", "Teaching & Academics"];
 
@@ -496,20 +497,6 @@ document.querySelector(".jii6").addEventListener("mouseout", () => {
 
 
 
-// ON LOGIN CHANGE THE NAVBAR---login -login-login------------
-(function () {
-    if (0) {
-        document.querySelector(".navbarsz-onlogin").style.display = "flex";
-        document.querySelector(".navbarsz").style.display = "none";
-    }
-    else {
-        document.querySelector(".navbarsz-onlogin").style.display = "none";
-        document.querySelector(".navbarsz").style.display = "flex";
-    }
-})();
-
-
-
 // carousel scripts
 
 let vacl = 1;
@@ -565,3 +552,184 @@ document.querySelector("#ppar1").addEventListener("click", () => {
 
 
 
+
+
+
+//------------------------Search results js---------------
+
+// before login
+document.querySelector(".myin1").addEventListener("keypress", (e) => {
+    
+    if (e.key === "Enter") {
+        event.preventDefault();
+        document.querySelector(".searchr1").style.display = "none";
+        document.querySelector(".searchr3").style.display = "block";
+        document.querySelector(".searchr1").style.display = "block";
+
+        let vals1 = document.querySelector(".myin1").value;
+        document.querySelector(".inpval1").innerText = `"${vals1}"`;
+
+        setTimeout(function () {
+            document.querySelector(".searchr3").style.display = "none";
+            document.querySelector(".searchr4").style.display = "block";
+            
+        }, 2000);
+        
+    }
+});
+
+
+
+// after login
+
+document.querySelector(".myin2").addEventListener("keypress", (e) => {
+
+    if (e.key === "Enter") {
+        event.preventDefault();
+        document.querySelector(".searchr1").style.display = "none";
+        document.querySelector(".searchr3").style.display = "block";
+        document.querySelector(".searchr1").style.display = "block";
+
+        let vals1 = document.querySelector(".myin2").value;
+        document.querySelector(".inpval1").innerText = `"${vals1}"`;
+
+        setTimeout(function () {
+            document.querySelector(".searchr3").style.display = "none";
+            document.querySelector(".searchr4").style.display = "block";
+
+        }, 2000);
+
+    }
+});
+
+
+function home1() {
+    document.querySelector(".searchr1").style.display = "none";
+    document.querySelector(".myin1").value = "";
+    document.querySelector(".myin2").value = "";
+}
+
+
+//--------XXX-------------Search results js---XXXX--------
+
+
+
+
+
+
+
+//---------UPDATE DATA FROM THE LOCAL STORAGE AND API TO THE HTML <---THINGS COMPILED BELOW----------
+
+
+// search result box-- data append -----
+
+
+// ------------------------------------------
+// category page link-- line--> 320-325
+
+
+
+
+// wishlist append data function
+let wD1 =JSON.parse(localStorage.getItem("wishlist")) || [];
+function wishlist() {
+
+    let wishs1 = `<div class="goa6">
+                <div> <img id="goa7" src="./images/Building-Flutter-desktop-app-tutorial-examples.avif" alt=""></div>
+                <div id="goa7i">
+                    <p id="goa8">Flutter and Dart - The complete guide [2022...</p>
+                    <p id="goa9">Acadamimd Lores posw</p>
+                    <p><span id="goa10"><span class="material-symbols-outlined" id="goa10i">currency_rupee</span>529</span> <span
+                            id="goa11"><span class="material-symbols-outlined" id="goa11i">currency_rupee</span>3499</span></p>
+                </div>
+            </div>`;
+
+    document.querySelector(".zoomx1").innerHTML += wishs1;
+
+}
+// wishlist();
+
+
+
+
+// -------------------------------------------------------
+// cart append data function
+let cD1 = JSON.parse(localStorage.getItem("cart")) || [];
+
+function carts() {
+    let cart1 = `<div class="goa6a">
+                    <div> <img id="goa7a" src="./images/mdb.webp" alt=""></div>
+                    <div id="goa7ia">
+                        <p id="goa8a">MongoDb - The complete guide [2022]</p>
+                        <p id="goa9a">Acadamimd Lores posw</p>
+                        <p><span id="goa10a"><span class="material-symbols-outlined" id="goa10ia">currency_rupee</span>529</span>
+                            <span id="goa11a"><span class="material-symbols-outlined" id="goa11ia">currency_rupee</span>3499</span>
+                        </p>
+                    </div>
+                </div>`;
+
+    document.querySelector(".cartdsx1").innerHTML += cart1;
+
+    //------total cart price----
+
+    // let sumTotal = 0;
+    // for (let x in cD1) {
+    //     suTotal += cD1[];
+    // }
+    // document.querySelector("#total0i").innerText = sumTotal;
+}
+// carts();
+
+
+
+
+// -----------------------------------------------------
+// count of item in cart and append the count
+
+function cartcountx() {
+    document.querySelector("#itemsincart1").innerText = cD1.length;
+}
+// cartcountx();
+
+
+
+
+
+// -------------------------------------------------
+// profile append data function
+
+let profiledata = JSON.parse(localStorage.getItem("profile"));
+
+function loggedIn() {
+    document.querySelector(".mica1").innerHTML = "";
+    let pro1 = `<div><img id="mica2" src="./images/me bg blur tree.png" alt=""></div>
+                    <div id="mica3">
+                        <a href="#"><p>Sanjeev Kumar Yadav</p></a>
+                        <a href="#"><p>sonukryadav56@gmail.com</p></a>
+                    </div>`;
+    document.querySelector(".mica1").innerHTML = pro1;
+}
+// loggedIn();
+
+
+
+//-XXX-----UPDATE DATA FROM THE LOCAL STORAGE AND API TO THE HTML <---THINGS COMPILED BELOW--XXX----- 
+
+
+
+
+// ON LOGIN & SIGN-OUT CHANGE THE NAVBAR---login -login-login------------
+(function () {
+    if (1) {
+        document.querySelector(".navbarsz-onlogin").style.display = "flex";
+        document.querySelector(".navbarsz").style.display = "none";
+
+        // cart count show
+        document.querySelector(".cartcount1").style.display = "block";
+
+    }
+    else {
+        document.querySelector(".navbarsz-onlogin").style.display = "none";
+        document.querySelector(".navbarsz").style.display = "flex";
+    }
+})();

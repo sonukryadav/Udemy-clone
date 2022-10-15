@@ -422,6 +422,7 @@ width: 100%;
     display: flex;
     margin: auto;
     width: 100px;
+    height: 100px;
     /* margin-top: 10px; */
 }
 
@@ -671,7 +672,7 @@ font-weight: 600;
     margin-top: -2px;
 }
 
-.jii6 > div >div >p {
+.jii6 > div >div >a >p {
     color: red;
     font-size: 16px;
     line-height: 14px;
@@ -681,7 +682,7 @@ font-weight: 600;
     cursor: pointer;
 }
 
-.jii6 > div >div >p:hover{
+.jii6 > div >div > a > p:hover{
     color: blue;
 }
 
@@ -689,6 +690,23 @@ font-weight: 600;
 
 /* --------XXXX------after login some of the hover -----XXXXXXXX*/
 
+/* ---------count of added item in to the cark-----------*/
+.cartcount1{
+display: none;
+position: absolute;
+z-index: 55;
+top: 14px;
+right: 105px;
+background-color: blue;
+color: white;
+padding: 1px 5px 5px 10px;
+border-radius: 45px;
+width: 25px;
+height: 20px;
+font-weight: 600;
+cursor: pointer;
+}
+/* ----xxx---count of added item in to the cark----xxx---*/
 
 
 /* ------------------------------------------------------------ */
@@ -845,6 +863,45 @@ font-weight: 600;
 /*------XXX---------HEADER ALL HOVER EFFECT-------XXX--------*/
 
 
+/*-----------Before login Search result page----------------*/
+
+
+.searchr1{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 75px;
+    z-index: 100;
+    height: 550%;
+    /* height: fit-content; */
+    background-color: white;
+    padding: 30px;
+}
+
+.searchr2{
+    
+}
+
+.searchr3{
+display: block;
+}
+
+#gif1{
+    display: block;
+    margin: auto;
+    /* border:1px dotted red; */
+    width: 40%;
+
+}
+
+.searchr4{
+display: none;
+}
+
+
+/*---XXX-----Before login Search result page------XXX-------*/
+
+
 
 /* ----------carousel effect--------------------------- */
 
@@ -854,7 +911,7 @@ font-weight: 600;
     overflow: hidden;
     /* height: 350px; */
     /* height: fit-content; */
-
+    margin-top: 2px;
 }
 
 .crl2{
@@ -909,7 +966,7 @@ font-family: "udemy sans", "sf pro text", -apple-system, BlinkMacSystemFont, Rob
     align-items: center;
     padding: 0 5.4%;
     position: absolute;
-    z-index: 31;
+    z-index: 2;
     top: 240px;
 }
 
@@ -1605,6 +1662,10 @@ BACKGROUND-COLOR:-------
         height: 180px;
         padding: 22px;
     }
+
+    .hbtnlr1{
+            top: 210px;
+    }
 }
 
 @media all and (min-width:950px) and (max-width: 1080px) {
@@ -1614,6 +1675,10 @@ BACKGROUND-COLOR:-------
         padding: 10px;
         height: 150px;
     }
+
+        .hbtnlr1{
+            top: 180px;
+    }
 }
 
 @media all and (max-width: 950px) {
@@ -1622,7 +1687,7 @@ BACKGROUND-COLOR:-------
         width: 100%;
         /* border: 2px dotted red; */
         overflow: hidden;
-        max-height: 340px;
+        max-height: 335px;
     }
 
     .crlcard1{
@@ -1634,6 +1699,25 @@ BACKGROUND-COLOR:-------
         margin-top: 0px;
         box-shadow: 1px 1px 7px rgb(255, 255, 255);
         
+    }
+
+    .crl2{
+        height: 250px;
+    }
+
+    #crltx1{
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 1px;
+    }
+
+    #crltx2{
+    font-size: 14px;
+    }
+
+
+    .hbtnlr1{
+        top: 190px;
     }
 
 }
