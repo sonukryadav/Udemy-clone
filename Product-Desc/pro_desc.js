@@ -38,3 +38,25 @@ document.querySelector('.showDesc').onclick = () => {
 //     document.querySelector('.previewBox').style.display = 'none';
 //     // document.querySelector('body').
 // }
+
+let divHiddentContent = document.querySelector('.hiddenContent');
+
+let clickedBtn = false;
+
+document.querySelector('.courseContent').onclick = () => {
+    // document.querySelector('.hiddenContent').style.display = 'block';
+    clickedBtn = true;
+
+    document.querySelector('.courseContent').onclick = () => {
+        // document.querySelector('.hiddenContent').style.display = 'none';
+        clickedBtn = false;
+    }
+}
+
+if (clickedBtn === true) { 
+    document.querySelector('.hiddenContent').style.display = 'block';
+    console.log('hiddenContent');
+}
+else {
+    document.querySelector('.hiddenContent').style.display = 'none';
+}

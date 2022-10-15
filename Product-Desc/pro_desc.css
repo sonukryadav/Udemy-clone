@@ -7,6 +7,10 @@
     segoe ui symbol;
 }
 
+p {
+  font-size: 14px;
+  line-height: 22px;
+}
 /*   Product Description   */
 
 #productDesc {
@@ -314,6 +318,7 @@
   border: 1px solid black;
   border-collapse: collapse;
   background-color: #f7f9fa;
+  cursor: pointer;
 }
 
 .topics {
@@ -332,6 +337,44 @@
 .duration {
   width: 20%;
 }
+
+.hiddenContent {
+  padding: 20px;
+  border: 1px solid black;
+  display: none;
+  /* border-collapse:initial; */
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.hiddenContent  img {
+  width: 3%;
+  margin-right: 20px;
+
+  
+}
+
+.hiddenImgDur {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.hiddenImg {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.hiddentLength {
+  display: flex;
+  width: 24%;
+  justify-content: space-between;
+}
+
+/* .hiddentLength > p {
+  margin-left: 32px;
+} */
 
 .sectionBtn {
   width: 100%;
@@ -377,7 +420,7 @@ li > p {
   margin-top: 15px;
 }
 
-.courseDescriptions  h4, h2 {
+.courseDescriptions  h4, .courseDescriptions h2 {
   margin-top: 20px;
 }
 
@@ -407,4 +450,86 @@ li > p {
   display: none;
 }
 
+.featuredReview {
+  width: 700px;
+  border: 1px solid black;
+  padding: 20px; 
+}
+
+.profileDesc {
+  display: flex;
+  /* justify-content: start; */
+  margin: 20px 0 10px 0;
+}
+
+.profileDesc img {
+  border-radius: 50%;
+  width: 10%;
+  margin-right: 15px;
+  /* justify-content: flex-end; */
+  /* flex-direction: initial; */
+}
+
+.like-dislike-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+.like-dislike-btn img{
+  width: 5%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.like-dislike-btn img:hover {
+  background-color: #efefef;
+}
+
+.like-dislike-btn a {
+  margin-left: 10px;
+}
+
+.studentAlsoBought {
+  width: 700px;
+  margin-top: 30px;
+}
+
+.BoughtProDescDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.proImg-proDesc {
+  width: 60%;
+  display: flex;
+}
+
+.proImg-proDesc img {
+  width: 15%;
+  margin-right: 10px;
+}
+
+.viewed-count {
+  /* width: 10%; */
+  display: flex;
+  width: 15%;
+  justify-content: flex-start;
+  align-items: baseline;
+  /* align-items: center; */
+}
+
+.viewed-count img {
+  width: 20%;
+}
+
+.wishlist-price {
+  display: flex;
+  width: 15%;
+}
+
+.wishlist-price img {
+  width: 60%;
+}
 
