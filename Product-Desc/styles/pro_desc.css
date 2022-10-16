@@ -17,10 +17,19 @@ p {
   background-color: #1c1d1f;
   width: 1519px;
   height: 295px;
-  padding: 32px;
+  padding: 20px;
   color: white;
 }
 
+.product_Description {
+  width: 700px;
+  margin: 0 0 20px 150px;
+  padding: 24px 0 16px 20px;
+}
+
+.priceDiv {
+  margin-top: 20px;
+}
 /*   Price Description in the side   */
 
 #prevPrice {
@@ -29,6 +38,10 @@ p {
   left: 960px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   /* right: 50px; */
+  /* position: -webkit-sticky; */
+  /* position: sticky;
+  float: left;
+  top: 0; */
 }
 
 .previewBox {
@@ -40,6 +53,7 @@ p {
   background-size: cover;
   /* background-blend-mode:soft-light; */
   backface-visibility: visible;
+  cursor: pointer;
   /* background-blend-mode: darken-both; */
   /* opacity: 0.8; */
   /* color: black; */
@@ -138,7 +152,6 @@ p {
   cursor: pointer;
   background-color: white;
   border: 1px solid black;
-
 }
 
 .buy-now:hover {
@@ -177,7 +190,7 @@ p {
   justify-content: space-around;
 }
 
-.shareLink a{
+.shareLink a {
   color: black;
   font-size: 14px;
   font-weight: 700;
@@ -200,10 +213,10 @@ p {
 
 #content {
   width: 1185px;
-  height: 8110px;
   background-color: white;
   margin: 0 168px 0 168px;
   padding: 32px 0 0 0;
+  /* border: 1px solid black; */
 }
 
 .learningContent,
@@ -303,7 +316,6 @@ p {
   justify-content: space-between;
   width: 700px;
   margin: 20px 0;
-  
 }
 
 #sections {
@@ -329,7 +341,7 @@ p {
 }
 
 .topics > img {
-  width:2%;
+  width: 2%;
   display: inline;
   margin-right: 20px;
 }
@@ -347,11 +359,9 @@ p {
   justify-content: space-between; */
 }
 
-.hiddenContent  img {
+.hiddenContent img {
   width: 3%;
   margin-right: 20px;
-
-  
 }
 
 .hiddenImgDur {
@@ -397,7 +407,7 @@ p {
   /* border: 1px solid black; */
 }
 
-.requirements>ul:nth-child(2) {
+.requirements > ul:nth-child(2) {
   padding-left: 24px;
   margin-top: 20px;
 }
@@ -420,7 +430,8 @@ li > p {
   margin-top: 15px;
 }
 
-.courseDescriptions  h4, .courseDescriptions h2 {
+.courseDescriptions h4,
+.courseDescriptions h2 {
   margin-top: 20px;
 }
 
@@ -434,7 +445,8 @@ li > p {
   margin-top: 10px;
 }
 
-.showDesc, .hideDesc {
+.showDesc,
+.hideDesc {
   padding: 10px;
   font-size: 16px;
   white-space: nowrap;
@@ -453,7 +465,7 @@ li > p {
 .featuredReview {
   width: 700px;
   border: 1px solid black;
-  padding: 20px; 
+  padding: 20px;
 }
 
 .profileDesc {
@@ -474,10 +486,9 @@ li > p {
   display: flex;
   align-items: center;
   margin-top: 10px;
-
 }
 
-.like-dislike-btn img{
+.like-dislike-btn img {
   width: 5%;
   margin-right: 10px;
   cursor: pointer;
@@ -496,40 +507,99 @@ li > p {
   margin-top: 30px;
 }
 
+.DivDescPro {
+  display: flex;
+  margin-top: 20px;
+}
+
 .BoughtProDescDiv {
   display: flex;
-  justify-content: space-between;
+  width: 380px;
+  height: 80px;
 }
 
-.proImg-proDesc {
-  width: 60%;
-  display: flex;
-}
-
-.proImg-proDesc img {
+.proImg {
   width: 15%;
   margin-right: 10px;
 }
 
-.viewed-count {
-  /* width: 10%; */
-  display: flex;
-  width: 15%;
-  justify-content: flex-start;
-  align-items: baseline;
-  /* align-items: center; */
+.proImg img {
+  width: 100%;
+  height: 70px;
 }
 
-.viewed-count img {
+.proDesc {
+  width: 80%;
+}
+
+.proDesc h5:nth-child(2) {
+  background-color: #eceb98;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.ratingDesc {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: #bf7e31;
+}
+
+.viewCount {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  width: 120px;
+  height: 80px;
+}
+
+.priceDescPro {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 80px;
+}
+
+.priceDescPro h5 {
   width: 20%;
+  margin-right: 30px;
 }
 
-.wishlist-price {
-  display: flex;
-  width: 15%;
+.wishlist-Img {
+  width: 70%;
 }
 
-.wishlist-price img {
-  width: 60%;
+.wishlist-Img img {
+  width: 80%;
+  margin-left: 18px;
 }
 
+.parentHidDivDescPro {
+  display: none;
+}
+
+.studentAlsoBought button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: 700;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.studentAlsoBought button:hover {
+  background-color: #efefef;
+}
+
+.showLessDivProBtn {
+  display: none;
+}
+
+.alsoBoughtTogether {
+  width: 700px;
+  border: 1px solid #9e9e9e;
+  
+}
