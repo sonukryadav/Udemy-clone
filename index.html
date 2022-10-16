@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="index.css">
     <title>Udemy - Homepage</title>
 </head>
@@ -404,10 +405,17 @@
             <div class="searchr4">
 
                 <div>
-                    <h1>164 results for <span class="inpval1">"CSS"</span></h1>
+                    <h1 class="nano1">164 results for <span class="inpval1">"CSS"</span></h1>
+                </div>
+
+                <!-- appener here in "appendHere1" -->
+                <div class="appendHere1">
+                    <!--    ---     -->
                 </div>
                 
             </div>
+
+            
 
         </div>
 
@@ -481,7 +489,7 @@
             <div id="ae3">
                 <span id="jpy">Python</span>
                 <span id="jex">Excel</span>
-                <span id="jwe">Web Development</span>
+                <span id="jwe" onclick="webx1()">Web Development</span>
                 <span id="jja">JavaScript</span>
                 <span id="jda">Data Science</span>
                 <span id="jaw">AWS Certification</span>
@@ -505,6 +513,26 @@
 
                 <div id="ae8">
 
+                    <!--  -->
+
+                    <!-- <div class="zoome1">
+                        <div ><img id="zoome2" src="./images/me bg blur tree.png" alt=""></div>
+                        <p id="zoome3">Khiwje ds sdc jdfg gdguhgf gasudhgf gsahdgf gashudgdsd ad</p>
+                        <p id="zoome4">Sonu kr yafa</p>
+                        <p id="zoome5">4.3 
+                            <span id="stinit1">
+                                <span id="ratesc1" class="material-icons">grade</span>
+                            </span>
+                            
+                        </p>
+                        <p id="zoome6"> 
+                            <span id="zoome7"><span id="ome7" class="material-symbols-outlined">currency_rupee</span>512</span> 
+                            <span id="zoome8"><span id="ome8" class="material-symbols-outlined">currency_rupee</span>5120</span>
+                        </p>
+                    </div> -->
+
+                    <!--  -->
+
                 </div>
                 
             </div>
@@ -518,6 +546,54 @@
             <div id="ae10">
             
             </div>
+        </div>
+
+        
+        <!-- 3.5 -->
+        
+        <div class="cat35">
+            <p id="ae122">Featured topics by category</p>
+
+            <div>
+                <div class="cat36">
+
+                    <div>
+                        <img src="./images/design.jpg" alt="cat">
+                        <p>Design</p>
+                    </div>
+                    <div>
+                        <img src="./images/development.jpg" alt="cat">
+                        <p>Development</p>
+                    </div>
+                    <div>
+                        <img src="./images/marketing.jpg" alt="cat">
+                        <p>Marketing</p>
+                    </div>
+                    <div>
+                        <img src="./images/itandSoftware.jpg" alt="cat">
+                        <p>IT and Software</p>
+                    </div>
+                    <div>
+                        <img src="./images/personal-development.jpg" alt="cat">
+                        <p>Personal Development</p>
+                    </div>
+                    <div>
+                        <img src="./images/business.jpg" alt="cat">
+                        <p>Business</p>
+                    </div>
+                    <div>
+                        <img src="./images/photography.jpg" alt="cat">
+                        <p>Photography</p>
+                    </div>
+                    <div>
+                        <img src="./images/music.jpg" alt="cat">
+                        <p>Music</p>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
 
 
@@ -719,9 +795,11 @@
         <div class="footbox1">
 
             <div id="langsz1">
+                <div id="google_translate_element"></div>
                 <span id="go1" class="material-symbols-outlined">language</span>
                 <span>English</span>
             </div>
+            
             
             <div>
                 <a href="#"><span>Udemy Business</span></a>
@@ -799,3 +877,13 @@
 
 </html>
 <script type="module" src="index.js"></script>
+
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

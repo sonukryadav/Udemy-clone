@@ -6,6 +6,7 @@ window.hover5si= hover5si;
 window.hover6si = hover6si;
 window.locate2 = locate2;
 window.home1 = home1;
+window.webx1 = webx1;
 
 let array2 = ["Development", "Business", "Finance & Accounting", "IT & Software", "Office Productivity", "Personal Development", "Design", "Marketing", "Lifestyle", "Photography & Video", "Health & Fitness", "Music", "Teaching & Academics"];
 
@@ -565,11 +566,13 @@ document.querySelector(".myin1").addEventListener("keypress", (e) => {
         document.querySelector(".searchr1").style.display = "none";
         document.querySelector(".searchr3").style.display = "block";
         document.querySelector(".searchr1").style.display = "block";
+        document.querySelector(".nano1").style.display = "none";
 
         let vals1 = document.querySelector(".myin1").value;
         document.querySelector(".inpval1").innerText = `"${vals1}"`;
 
         setTimeout(function () {
+            document.querySelector(".nano1").style.display = "block";
             document.querySelector(".searchr3").style.display = "none";
             document.querySelector(".searchr4").style.display = "block";
             
@@ -589,11 +592,13 @@ document.querySelector(".myin2").addEventListener("keypress", (e) => {
         document.querySelector(".searchr1").style.display = "none";
         document.querySelector(".searchr3").style.display = "block";
         document.querySelector(".searchr1").style.display = "block";
+        document.querySelector(".nano1").style.display = "none";
 
         let vals1 = document.querySelector(".myin2").value;
         document.querySelector(".inpval1").innerText = `"${vals1}"`;
 
         setTimeout(function () {
+            document.querySelector(".nano1").style.display = "block";
             document.querySelector(".searchr3").style.display = "none";
             document.querySelector(".searchr4").style.display = "block";
 
@@ -616,12 +621,218 @@ function home1() {
 
 
 
+//--------------------product card in mid section-------------------------
+
+
+
+//  get stars based on rating count :
+// function stars(n) {
+
+//     let str = `<span id="ratesc1" class="material-icons">grade</span>`;
+//     let str1 = "";
+    
+//     for (let x = 1; x <= (parseInt(n)); x++){
+//         str1 += str;
+//     }
+//     document.querySelector("#stinit1").innerHTML = str1;
+    
+// }
+// stars(5);
+
+
+// append data
+
+
+// actual_price
+// :
+// 0
+// duration
+// :
+// 1
+// headline
+// :
+// "This Python For Beginners Course Teaches You The Python Language  Fast.  Includes Python Online Training With Python 3"
+// id
+// :
+// 629302
+// image
+// :
+// "https://img-c.udemycdn.com/course/480x270/629302_8a2d_2.jpg"
+// is_paid
+// :
+// false
+// is_practice_test_course
+// :
+// false
+// level
+// :
+// "beginner"
+// price
+// :
+// 3499
+// published_title
+// :
+// "python-the-complete-python-developer-course"
+// rating
+// :
+// 4.5
+// title
+// :
+// "Learn Python Programming Masterclass"
+
+(async function () {
+    let datas1 = await fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`);
+    let obj1 = await datas1.json();
+    console.log(obj1.record);
+
+
+    for (let x in obj1.record.python) {
+
+        // starts-------------------------------
+        let str1 = "";
+        let str = `<span id="ratesc1" class="material-icons">grade</span>`;
+        console.log(parseInt(`${obj1.record.python[x].rating}`));
+        
+        for (let x1 = 1; x1 <= (parseInt(`${obj1.record.python[x].rating}`)); x1++){
+        str1 += str;
+        }
+        // document.querySelector("#stinit1").innerHTML = str1;
+        //stars-----------xxx-------------------
+        
+        let dsa1 = `<div class="zoome1">
+                        <div ><img id="zoome2" src="${obj1.record.python[x].image}" alt=""></div>
+                        <p id="zoome3">${obj1.record.python[x].headline}</p>
+                        <p id="zoome4">${obj1.record.python[x].title}</p>
+                        <p id="zoome5">${obj1.record.python[x].rating} 
+                            <span id="stinit1">
+                                ${str1}
+                            </span>
+                            
+                        </p>
+                        <p id="zoome6"> 
+                            <span id="zoome7"><span id="ome7" class="material-symbols-outlined">currency_rupee</span>${obj1.record.python[x].actual_price}</span> 
+                            <span id="zoome8"><span id="ome8" class="material-symbols-outlined">currency_rupee</span>${obj1.record.python[x].price}</span>
+                        </p>
+                    </div>`;
+        // stars(`${ obj1.record.python[x].rating}`);
+        document.querySelector("#ae8").innerHTML +=dsa1;
+        
+    }
+
+}) ();
+
+
+// on click to web development
+
+function webx1() {
+    document.getElementById("ae4").innerText = "Build websites and applications with Web Development";
+    document.getElementById("ae5").innerText = "The world of web development is as wide as the internet itself. Much of our social and vocational lives play out on the internet, which prompts new industries aimed at creating, managing, and debugging the websites and applications that we increasingly rely on.";
+    document.getElementById("ae7").innerText = "Explore Web Development";
+
+    document.getElementById("ae8").innerText = ``;
+
+
+    (async function () {
+        let datas1 = await fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`);
+        let obj1 = await datas1.json();
+
+        for (let x in obj1.record.webdevelopment) {
+
+            // starts-------------------------------
+            let str1 = "";
+            let str = `<span id="ratesc1" class="material-icons">grade</span>`;
+
+            for (let x1 = 1; x1 <= (parseInt(`${obj1.record.webdevelopment[x].rating}`)); x1++) {
+                str1 += str;
+            }
+            // document.querySelector("#stinit1").innerHTML = str1;
+            //stars-----------xxx-------------------
+
+            let dsa1 = `<div class="zoome1">
+                        <div ><img id="zoome2" src="${obj1.record.webdevelopment[x].image}" alt=""></div>
+                        <p id="zoome3">${obj1.record.webdevelopment[x].headline}</p>
+                        <p id="zoome4">${obj1.record.webdevelopment[x].title}</p>
+                        <p id="zoome5">${obj1.record.webdevelopment[x].rating} 
+                            <span id="stinit1">
+                                ${str1}
+                            </span>
+                            
+                        </p>
+                        <p id="zoome6"> 
+                            <span id="zoome7"><span id="ome7" class="material-symbols-outlined">currency_rupee</span>${obj1.record.webdevelopment[x].actual_price}</span> 
+                            <span id="zoome8"><span id="ome8" class="material-symbols-outlined">currency_rupee</span>${obj1.record.webdevelopment[x].price}</span>
+                        </p>
+                    </div>`;
+            // stars(`${ obj1.record.webdevelopment[x].rating}`);
+            document.querySelector("#ae8").innerHTML += dsa1;
+
+        }
+
+    })();
+}
+
+
+// students are also viewing :------------------
+
+
+(async function () {
+    let datas1 = await fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`);
+    let obj1 = await datas1.json();
+    console.log(obj1.record);
+
+
+    for (let x in obj1.record.html) {
+
+        // starts-------------------------------
+        let str1 = "";
+        let str = `<span id="ratesc1" class="material-icons">grade</span>`;
+        console.log(parseInt(`${obj1.record.html[x].rating}`));
+
+        for (let x1 = 1; x1 <= (parseInt(`${obj1.record.html[x].rating}`)); x1++) {
+            str1 += str;
+        }
+        // document.querySelector("#stinit1").innerHTML = str1;
+        //stars-----------xxx-------------------
+
+        let dsa1 = `<div class="zoome1">
+                        <div ><img id="zoome2" src="${obj1.record.html[x].image}" alt=""></div>
+                        <p id="zoome3">${obj1.record.html[x].headline}</p>
+                        <p id="zoome4">${obj1.record.html[x].title}</p>
+                        <p id="zoome5">${obj1.record.html[x].rating} 
+                            <span id="stinit1">
+                                ${str1}
+                            </span>
+                            
+                        </p>
+                        <p id="zoome6"> 
+                            <span id="zoome7"><span id="ome7" class="material-symbols-outlined">currency_rupee</span>${obj1.record.html[x].actual_price}</span> 
+                            <span id="zoome8"><span id="ome8" class="material-symbols-outlined">currency_rupee</span>${obj1.record.html[x].price}</span>
+                        </p>
+                    </div>`;
+        // stars(`${ obj1.record.html[x].rating}`);
+        document.querySelector("#ae10").innerHTML += dsa1;
+
+    }
+
+})();
+
+
+//-------XXXX--------product card in mid section-----------XXXX-----------
+
+
+
+
+
 
 
 //---------UPDATE DATA FROM THE LOCAL STORAGE AND API TO THE HTML <---THINGS COMPILED BELOW----------
 
 
 // search result box-- data append -----
+// html-start--> 396 (append in "appendHere1")
+
+
+
 
 
 // ------------------------------------------
