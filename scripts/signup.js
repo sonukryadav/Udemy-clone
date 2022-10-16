@@ -18,7 +18,7 @@ function signupform(e){
     localStorage.setItem("user_details", json_user)
 
 
-    window.location.href = "login_page.html"
+    window.location.href = "login.html"
 
  }
     var sign_btn = document.getElementById("sign-btn")
