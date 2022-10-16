@@ -64,6 +64,10 @@
     margin-bottom: 15px;
 }
 
+#details_div {
+    flex: 6;
+}
+
 #details_div>* {
     margin-top: 8px;
 }
@@ -84,4 +88,9 @@
 
 #product_parent_div hr {
     border: 0.1px solid rgb(237, 233, 233);
+}
+
+#no_image_found {
+    margin-top: 60px;
+    margin-left: 40px;
 }

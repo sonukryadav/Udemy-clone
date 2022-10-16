@@ -9,8 +9,7 @@
 // }]
 
 // url = "https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0";
-localStorage.setItem("element", "java");
-
+localStorage.setItem("element", "c");
 
 const getdata = (x) => {
     if (x == "java") {
@@ -90,7 +89,7 @@ const get_price_filter = (arr, x) => {
 }
 
 const get_rating_filter = (arr, x) => {
-    getlecture(arr, x);
+    get_level_filter(arr, x);
     let checkboxes = document.querySelectorAll('.checkbox4');
 
     for (let checkbox of checkboxes) {
@@ -99,15 +98,82 @@ const get_rating_filter = (arr, x) => {
                 let rating = this.value
 
                 let newarr = arr.filter(function (elem) {
-                    if (elem.rating <= rating) {
+                    if (elem.rating >= rating) {
                         return elem
                     }
                 })
-                getlecture(newarr, x);
+                get_level_filter(newarr, x);
             }
         })
     }
 
+}
+
+const get_level_filter = (arr, x) => {
+    get_duration_filter(arr, x);
+    let checkboxes = document.querySelectorAll('.checkbox2');
+
+    for (let checkbox of checkboxes) {
+        checkbox.addEventListener('click', function () {
+            if (this.checked == true) {
+                let level = this.value
+                let newarr = arr.filter(function (elem) {
+                    if (elem.level == level) {
+                        return elem
+                    }
+                })
+                get_duration_filter(newarr, x);
+            }
+        })
+    }
+}
+
+const get_duration_filter = (arr, x) => {
+    sorting_lectures(arr, x);
+    let checkboxes = document.querySelectorAll('.checkbox5');
+
+    for (let checkbox of checkboxes) {
+        checkbox.addEventListener('click', function () {
+            if (this.checked == true) {
+                let duration = this.value
+                let newarr = arr.filter(function (elem) {
+                    if (elem.duration == duration) {
+                        return elem
+                    }
+                })
+                sorting_lectures(newarr, x);
+            }
+        })
+    }
+}
+
+const sorting_lectures = (arr, x) => {
+    getlecture(arr, x);
+    document.getElementById("sorting_lectures").addEventListener("change", function () {
+        let value = document.getElementById("sorting_lectures").value;
+        if (value == "rated") {
+            arr.sort(function (a, b) {
+                if (a.rating > b.rating) return -1;
+                if (a.rating < b.rating) return 1;
+                return 0;
+            })
+        }
+        if (value == "low") {
+            arr.sort(function (a, b) {
+                if (a.actual_price > b.actual_price) return 1;
+                if (a.actual_price < b.actual_price) return -1;
+                return 0;
+            })
+        }
+        if (value == "high") {
+            arr.sort(function (a, b) {
+                if (a.actual_price > b.actual_price) return -1;
+                if (a.actual_price < b.actual_price) return 1;
+                return 0;
+            })
+        }
+        getlecture(arr, x);
+    })
 }
 
 function getlecture(arr, x) {
@@ -115,50 +181,62 @@ function getlecture(arr, x) {
     console.log(arr);
     let count = 0;
     document.getElementById("counts").innerText = arr.length;
-    document.getElementById("lecture_name").innerText = x;
     let reults = document.createElement("h3");
     reults.innerText = arr.length + " results";
     document.getElementById("product_parent_div").append(reults);
-    arr.map((elem) => {
-        let div = document.createElement("div");
-        let div1 = document.createElement("div");
-        div1.setAttribute("id", "image_div")
-        let div2 = document.createElement("div");
-        div2.setAttribute("id", "details_div")
-        let div3 = document.createElement("div");
-        div3.setAttribute("id", "price_div")
-        let img = document.createElement("img");
-        img.src = elem.image;
-        let title = document.createElement("h3");
-        title.innerText = elem.title;
-        let des = document.createElement("p");
-        des.innerText = elem.headline;
-        let teacher = document.createElement("p");
-        teacher.innerText = elem.visible_instructors[0].title;
-        let rating = document.createElement("h4");
-        rating.innerText = elem.rating;
-        let price = document.createElement("h3");
-        price.innerText = elem.price;
-        let hr = document.createElement("hr");
-        if (count % 3 === 0) {
-            let best = document.createElement("button")
-            best.innerText = "Bestseller"
-            div2.append(title, des, teacher, rating, best);
-        }
-        else {
-            div2.append(title, des, teacher, rating);
-        }
-        div1.append(img);
-        div3.append(price);
-        div.append(div1, div2, div3)
-        document.getElementById("product_parent_div").append(div, hr);
-        count++;
-    })
+    if (arr.length == 0) {
+        let image = document.createElement("img");
+        image.setAttribute("id", "no_image_found")
+        image.src = "https://m.media-amazon.com/images/G/01/mobile-apps/dex/amazoncreator/amazon-creator-no-content-found._TTH_.png";
+        document.getElementById("product_parent_div").append(image);
+    }
+    else {
+        arr.map((elem) => {
+            let div = document.createElement("div");
+            let div1 = document.createElement("div");
+            div1.setAttribute("id", "image_div")
+            let div2 = document.createElement("div");
+            div2.setAttribute("id", "details_div")
+            let div3 = document.createElement("div");
+            div3.setAttribute("id", "price_div")
+            let img = document.createElement("img");
+            img.src = elem.image;
+            let title = document.createElement("h3");
+            title.innerText = elem.title;
+            let des = document.createElement("p");
+            des.innerText = elem.headline;
+            let teacher = document.createElement("p");
+            teacher.innerText = elem.visible_instructors[0].title;
+            let rating = document.createElement("h4");
+            rating.innerText = elem.rating;
+            let price = document.createElement("h3");
+            if (elem.actual_price == 0) {
+                price.innerText = "Free"
+            }
+            else {
+                price.innerText = "₹" + elem.actual_price;
+            }
+            let hr = document.createElement("hr");
+            if (count % 3 === 0) {
+                let best = document.createElement("button")
+                best.innerText = "Bestseller"
+                div2.append(title, des, teacher, rating, best);
+            }
+            else {
+                div2.append(title, des, teacher, rating);
+            }
+            div1.append(img);
+            div3.append(price);
+            div.append(div1, div2, div3)
+            document.getElementById("product_parent_div").append(div, hr);
+            count++;
+        })
+    }
 }
 
 let x = localStorage.getItem("element");
+document.getElementById("lecture_name").innerText = x;
 getdata(x);
-
 
 
 let checkboxes = document.querySelectorAll('.checkbox');
@@ -170,3 +248,5 @@ for (let checkbox of checkboxes) {
         }
     })
 }
+
+
