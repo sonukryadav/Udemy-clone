@@ -9,7 +9,6 @@
 // }]
 
 // url = "https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0";
-localStorage.setItem("element", "c");
 
 const getdata = (x) => {
     if (x == "java") {
@@ -83,6 +82,9 @@ const get_price_filter = (arr, x) => {
                 })
                 get_rating_filter(newarr, x);
             }
+            else if (this.checked == false) {
+                get_rating_filter(arr, x);
+            }
         })
     }
 
@@ -104,6 +106,9 @@ const get_rating_filter = (arr, x) => {
                 })
                 get_level_filter(newarr, x);
             }
+            else if (this.checked == false) {
+                get_level_filter(arr, x);
+            }
         })
     }
 
@@ -124,6 +129,9 @@ const get_level_filter = (arr, x) => {
                 })
                 get_duration_filter(newarr, x);
             }
+            else if (this.checked == false) {
+                get_duration_filter(arr, x);
+            }
         })
     }
 }
@@ -142,6 +150,9 @@ const get_duration_filter = (arr, x) => {
                     }
                 })
                 sorting_lectures(newarr, x);
+            }
+            else if (this.checked == false) {
+                sorting_lectures(arr, x);
             }
         })
     }
@@ -250,3 +261,47 @@ for (let checkbox of checkboxes) {
 }
 
 
+const show_more_button = document.getElementById("show_more_button");
+const text = document.getElementById("myfilter");
+
+show_more_button.addEventListener("click", (e) => {
+    text.classList.toggle("show-more");
+    if (show_more_button.innerText == 'Show more...') {
+        show_more_button.innerText = "Show less..."
+    }
+    else {
+        show_more_button.innerText = "Show more...";
+    }
+})
+
+const filter_button_hide = document.getElementById("filter_button_hide_fun");
+const hide_filter = document.getElementById("filter_products");
+
+filter_button_hide.addEventListener("click", (e) => {
+    hide_filter.classList.toggle("show-filter-options")
+})
+
+
+document.querySelector(".suggested_topic_button1").addEventListener("click", () => {
+    localStorage.setItem("element", "c");
+    location.href = "products.html"
+})
+document.querySelector(".suggested_topic_button2").addEventListener("click", () => {
+    localStorage.setItem("element", "java");
+    location.href = "products.html"
+})
+document.querySelector(".suggested_topic_button3").addEventListener("click", () => {
+    localStorage.setItem("element", "python");
+    location.href = "products.html"
+})
+document.querySelector(".suggested_topic_button4").addEventListener("click", () => {
+    localStorage.setItem("element", "c++");
+    location.href = "products.html"
+})
+document.querySelector(".suggested_topic_button5").addEventListener("click", () => {
+    localStorage.setItem("element", "web development");
+    location.href = "products.html"
+})
+
+
+//product_description
