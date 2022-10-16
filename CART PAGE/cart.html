@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART PAGE</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <h1 id="cartheading">Shopping Cart</h1>
+    
+    
+    <div id="emptyCart">
+        <p>0 Courses in Cart</p>
+        <div id="emptyCartbox">
+        <div><img src="https://s.udemycdn.com/browse_components/flyout/empty-shopping-cart-v2.jpg" alt=""></div>
+        <p>Your cart is empty. Keep shopping to find a course!</p>
+        <button onclick="addPro()" id="keepshopping">Keep Shopping</button>
+    </div>
+    </div>
+
+    <div id="nonemptycart">
+        <p>1 Course in Cart</p>
+        <div id="charles_courses">
+          <div id="charles_courecard">
+             <img src="https://img-c.udemycdn.com/course/480x270/533682_c10c_4.jpg">
+             <div id="charles_coursedata">
+              <h4 id="title">Java Programming Masterclass covering Java 11 & Java 17</h4>
+              <p id="job_title">Java Python Android and C# Expert Developer - 1.22M students</p>
+              <p id="rating">4.5</p>
+             </div>
+             <div id="charles_buttons">
+              <button>REMOVE</button>
+              <button>Save For Later</button>
+              <button>Move To WishList</button>
+             </div>
+             <h3 id="price">3499</h3>
+         </div>
+        </div>
+        
+    </div>
+
+
+    <div id="userProCont">
+      <div id="top">
+      </div>
+      <div id ="bot">
+        <h5 id="coupon">Apply Coupon</h5>
+        <input type="text" placeholder="Add Code Here" id="couponCode">
+        <button onclick="checkCoupon()">Click Here to Apply Code</button>
+        <h3 id="payment">Payment Details</h3>
+        <div>MRP TOTAL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pRc"></span></div>
+        <div>Product Discount <span id="dSc"></span></div>
+        <div>Total Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id= tA></span></div>
+        <input type="number" placeholder="Enter Your Number Here" id="verifyNumber">
+        <button onclick="placeOrder()">Place Order</button>
+      </div>
+    </div>
+    
+</body>
+</html>
