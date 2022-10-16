@@ -69,6 +69,7 @@ document.querySelector(".sxhover1i").addEventListener("mouseout", hover8);
 document.querySelector(".sxhover1ii").addEventListener("mouseover", hover7sii);
 document.querySelector(".sxhover1ii").addEventListener("mouseout", hover8sii);
 
+
 // box1
 function hover1(array1, box, pos) {
     document.querySelector(`.${box}`).style.display = "block";
@@ -94,6 +95,7 @@ function hover1(array1, box, pos) {
         document.querySelector(`.${pos}`).append(div1);
     }
 }
+
 
 
 // box2
@@ -245,67 +247,99 @@ function hover6(x1) {
     
 }
 
-let xax = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+let xax = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+
+
+
+// -------------------------------------------------------------------------------------------
+
+function hover1ssi(array1, box, pos, inJd) {
+    document.querySelector(`.${box}`).style.display = "block";
+
+    if (document.querySelector(`.${pos}`)) {
+        document.querySelector(`.${pos}`).innerHTML = "";
+    }
+    for (let x in array1) {
+        let div1 = document.createElement("div");
+        div1.setAttribute("class", `${inJd}`);
+        div1.setAttribute("onclick", `locate2("${array1[x]}")`);
+        // div1.setAttribute("onmouseover", `hover5si("${x}")`);
+        // div1.setAttribute("onmouseout", `hover6si("${x}")`);
+
+        let span1 = document.createElement("span");
+        span1.innerText = `${array1[x]}`;
+
+        let span2 = document.createElement("span");
+        span2.className = "material-symbols-outlined";
+        span2.innerText = "keyboard_arrow_right";
+
+        div1.append(span1, span2);
+        document.querySelector(`.${pos}`).append(div1);
+    }
+}
 
 
 function hover5si(x1) {
     for (let x in xax) {
         if (x == x1) {
-            // document.getElementsByClassName("sxhv2i")[x1].style.color = "RGB(86, 36, 208)";
             document.querySelector(".sxhover1ii").style.display = "block";
             switch (x) {
                 case "0":
-                    hover1si(g0, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g0, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
                 case "1": {
-                    hover1si(g1, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g1, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
                 }
                 case "2":
-                    hover1si(g2, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g2, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "3":
-                    hover1si(g3, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g3, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "4":
-                    hover1si(g4, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g4, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "5":
-                    hover1si(g5, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g5, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "6":
-                    hover1si(g6,"sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g6, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
                 case "7": {
-                    hover1si(g7, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g7, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
                 }
                 case "8":
-                    hover1si(g8, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g8, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "9":
-                    hover1si(g9, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g9, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "10":
-                    hover1si(g0, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g0, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 case "11":
-                    hover1si(g1, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g1, "sxhover1ii", "sxhv1ii", "sxhv2i");
                     break;
 
                 default:
-                    hover1si(g2, "sxhover1ii", "sxhv1ii", "sxhv2i");
+                    hover1ssi(g2, "sxhover1ii", "sxhv1ii", "sxhv2i");
             }
         }
     }
 }
+
+
+// -------------------------------------------------------------------------------------------
+
 
 function hover6si(x1) {
     for (let x in xax) {
@@ -319,11 +353,19 @@ function hover6si(x1) {
 // location on click--------------------------------------
 
 function locate1(x) {
-    location.href = `${x}.html`;
+    location.href = `products.html`;
+    // location.href = `${x}.html`;
+    localStorage.setItem("Category", "true");
+    localStorage.setItem("Element", x);
+
+
 }
 
 function locate2(x) {
-    location.href = `${x}.html`;
+    location.href = `products.html`;
+    // location.href = `${x}.html`;
+    localStorage.setItem("Category", "true");
+    localStorage.setItem("Element", x);
 }
 
 
@@ -563,12 +605,15 @@ document.querySelector(".myin1").addEventListener("keypress", (e) => {
     
     if (e.key === "Enter") {
         event.preventDefault();
+
+        let vals1 = document.querySelector(".myin1").value;
+        localStorage.setItem("Element", vals1);
+        location.href = "./products.html";
         document.querySelector(".searchr1").style.display = "none";
         document.querySelector(".searchr3").style.display = "block";
         document.querySelector(".searchr1").style.display = "block";
         document.querySelector(".nano1").style.display = "none";
 
-        let vals1 = document.querySelector(".myin1").value;
         document.querySelector(".inpval1").innerText = `"${vals1}"`;
 
         setTimeout(function () {
@@ -583,18 +628,24 @@ document.querySelector(".myin1").addEventListener("keypress", (e) => {
 
 
 
+
 // after login
 
 document.querySelector(".myin2").addEventListener("keypress", (e) => {
 
     if (e.key === "Enter") {
         event.preventDefault();
+
+        let vals1 = document.querySelector(".myin2").value;
+        localStorage.setItem("Element", vals1);
+        location.href = "./products.html";
+
         document.querySelector(".searchr1").style.display = "none";
         document.querySelector(".searchr3").style.display = "block";
         document.querySelector(".searchr1").style.display = "block";
         document.querySelector(".nano1").style.display = "none";
 
-        let vals1 = document.querySelector(".myin2").value;
+        
         document.querySelector(".inpval1").innerText = `"${vals1}"`;
 
         setTimeout(function () {
@@ -640,50 +691,11 @@ function home1() {
 // stars(5);
 
 
-// append data
-
-
-// actual_price
-// :
-// 0
-// duration
-// :
-// 1
-// headline
-// :
-// "This Python For Beginners Course Teaches You The Python Language  Fast.  Includes Python Online Training With Python 3"
-// id
-// :
-// 629302
-// image
-// :
-// "https://img-c.udemycdn.com/course/480x270/629302_8a2d_2.jpg"
-// is_paid
-// :
-// false
-// is_practice_test_course
-// :
-// false
-// level
-// :
-// "beginner"
-// price
-// :
-// 3499
-// published_title
-// :
-// "python-the-complete-python-developer-course"
-// rating
-// :
-// 4.5
-// title
-// :
-// "Learn Python Programming Masterclass"
 
 (async function () {
     let datas1 = await fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`);
     let obj1 = await datas1.json();
-    console.log(obj1.record);
+    // console.log(obj1.record);
 
 
     for (let x in obj1.record.python) {
@@ -691,7 +703,7 @@ function home1() {
         // starts-------------------------------
         let str1 = "";
         let str = `<span id="ratesc1" class="material-icons">grade</span>`;
-        console.log(parseInt(`${obj1.record.python[x].rating}`));
+        // console.log(parseInt(`${obj1.record.python[x].rating}`));
         
         for (let x1 = 1; x1 <= (parseInt(`${obj1.record.python[x].rating}`)); x1++){
         str1 += str;
@@ -778,7 +790,7 @@ function webx1() {
 (async function () {
     let datas1 = await fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`);
     let obj1 = await datas1.json();
-    console.log(obj1.record);
+    // console.log(obj1.record);
 
 
     for (let x in obj1.record.html) {
@@ -786,7 +798,7 @@ function webx1() {
         // starts-------------------------------
         let str1 = "";
         let str = `<span id="ratesc1" class="material-icons">grade</span>`;
-        console.log(parseInt(`${obj1.record.html[x].rating}`));
+        // console.log(parseInt(`${obj1.record.html[x].rating}`));
 
         for (let x1 = 1; x1 <= (parseInt(`${obj1.record.html[x].rating}`)); x1++) {
             str1 += str;
@@ -865,31 +877,35 @@ function wishlist() {
 
 // -------------------------------------------------------
 // cart append data function
-let cD1 = JSON.parse(localStorage.getItem("cart")) || [];
+
+// localStorage.setItem("cart_lectures", JSON.stringify(mu));
+let cD1 = JSON.parse(localStorage.getItem("cart_lectures")) || [];
 
 function carts() {
-    let cart1 = `<div class="goa6a">
-                    <div> <img id="goa7a" src="./images/mdb.webp" alt=""></div>
+    for (let z in cD1) {
+        let cart1 = `<div class="goa6a">
+                    <div> <img id="goa7a" src="${cD1[z].image}" alt=""></div>
                     <div id="goa7ia">
-                        <p id="goa8a">MongoDb - The complete guide [2022]</p>
-                        <p id="goa9a">Acadamimd Lores posw</p>
-                        <p><span id="goa10a"><span class="material-symbols-outlined" id="goa10ia">currency_rupee</span>529</span>
-                            <span id="goa11a"><span class="material-symbols-outlined" id="goa11ia">currency_rupee</span>3499</span>
+                        <p id="goa8a">${cD1[z].title}</p>
+                        <p id="goa9a">${cD1[z].visible_instructors[0].name}</p>
+                        <p><span id="goa10a"><span class="material-symbols-outlined" id="goa10ia">currency_rupee</span>${cD1[z].actual_price}</span>
+                            <span id="goa11a"><span class="material-symbols-outlined" id="goa11ia">currency_rupee</span>${cD1[z].price}</span>
                         </p>
                     </div>
                 </div>`;
-
-    document.querySelector(".cartdsx1").innerHTML += cart1;
-
+        document.querySelector(".cartdsx1").innerHTML += cart1;
+    }
+    
     //------total cart price----
-
-    // let sumTotal = 0;
-    // for (let x in cD1) {
-    //     suTotal += cD1[];
-    // }
-    // document.querySelector("#total0i").innerText = sumTotal;
+    
+    let sumTotal = 0;
+    for (let x in cD1) {
+        // console.log(`${cD1[x].actual_price}`);
+        sumTotal += Number(`${cD1[x].actual_price}`);
+    }
+    document.querySelector("#total0i").innerText = sumTotal;
 }
-// carts();
+carts();
 
 
 
@@ -900,7 +916,7 @@ function carts() {
 function cartcountx() {
     document.querySelector("#itemsincart1").innerText = cD1.length;
 }
-// cartcountx();
+cartcountx();
 
 
 
@@ -908,30 +924,36 @@ function cartcountx() {
 
 // -------------------------------------------------
 // profile append data function
+// let mxa = [{ name: "so", email: "wefd", }];
+// localStorage.setItem("user_details", JSON.stringify(mxa));
 
-let profiledata = JSON.parse(localStorage.getItem("profile"));
+let profiledata = JSON.parse(localStorage.getItem("user_details"));
 
 function loggedIn() {
     document.querySelector(".mica1").innerHTML = "";
-    let pro1 = `<div><img id="mica2" src="./images/me bg blur tree.png" alt=""></div>
+    for (let m in profiledata) { 
+        let pro1 = `<div><img id="mica2" src="./images/me bg blur tree.png" alt=""></div>
                     <div id="mica3">
-                        <a href="#"><p>Sanjeev Kumar Yadav</p></a>
-                        <a href="#"><p>sonukryadav56@gmail.com</p></a>
+                        <a href="#"><p>${profiledata[m].name}</p></a>
+                        <a href="#"><p>${profiledata[m].email}</p></a>
                     </div>`;
-    document.querySelector(".mica1").innerHTML = pro1;
+        document.querySelector(".mica1").innerHTML = pro1;
+    }
+    
 }
-// loggedIn();
+loggedIn();
 
 
 
-//-XXX-----UPDATE DATA FROM THE LOCAL STORAGE AND API TO THE HTML <---THINGS COMPILED BELOW--XXX----- 
-
+//-XXX-----UPDATE DATA FROM THE LOCAL STORAGE AND API TO THE HTML <---THINGS COMPILED BELOW--XXX-----
 
 
 
 // ON LOGIN & SIGN-OUT CHANGE THE NAVBAR---login -login-login------------
+localStorage.setItem("logs", "false");
+let logged = localStorage.getItem('logs');
 (function () {
-    if (1) {
+    if (logged == "true") {
         document.querySelector(".navbarsz-onlogin").style.display = "flex";
         document.querySelector(".navbarsz").style.display = "none";
 
