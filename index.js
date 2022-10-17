@@ -608,15 +608,17 @@ document.querySelector(".myin1").addEventListener("keypress", (e) => {
 
         let vals1 = document.querySelector(".myin1").value;
         localStorage.setItem("Element", vals1);
-        location.href = "./products.html";
+        // location.href = "./products.html";
         document.querySelector(".searchr1").style.display = "none";
         document.querySelector(".searchr3").style.display = "block";
         document.querySelector(".searchr1").style.display = "block";
         document.querySelector(".nano1").style.display = "none";
+        
 
         document.querySelector(".inpval1").innerText = `"${vals1}"`;
 
         setTimeout(function () {
+            location.href = "./products.html";
             document.querySelector(".nano1").style.display = "block";
             document.querySelector(".searchr3").style.display = "none";
             document.querySelector(".searchr4").style.display = "block";
@@ -638,7 +640,7 @@ document.querySelector(".myin2").addEventListener("keypress", (e) => {
 
         let vals1 = document.querySelector(".myin2").value;
         localStorage.setItem("Element", vals1);
-        location.href = "./products.html";
+        // location.href = "./products.html";
 
         document.querySelector(".searchr1").style.display = "none";
         document.querySelector(".searchr3").style.display = "block";
@@ -649,6 +651,7 @@ document.querySelector(".myin2").addEventListener("keypress", (e) => {
         document.querySelector(".inpval1").innerText = `"${vals1}"`;
 
         setTimeout(function () {
+            location.href = "./products.html";
             document.querySelector(".nano1").style.display = "block";
             document.querySelector(".searchr3").style.display = "none";
             document.querySelector(".searchr4").style.display = "block";
