@@ -60,6 +60,131 @@ const getdata = (x) => {
     }
 }
 
+const category_showing_fun = (arr, key) => {
+    let div1 = document.createElement("div");
+    let h1 = document.createElement("h1");
+    h1.innerText = key;
+    div1.append(h1);
+    let div2 = document.createElement("div");
+    let h21 = document.createElement("h2");
+    h21.innerText = "courses to get you started";
+    div2.append(h21);
+    let div3 = document.createElement("div");
+    for (let i = 0; i < 5; i++) {
+        let div4 = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = arr[i].image;
+        let title = document.createElement("h3");
+        title.innerText = arr[i].title;
+        let teacher = document.createElement("p");
+        teacher.innerText = arr[i].visible_instructors[0].title;
+        let rating = document.createElement("h4");
+        rating.innerText = arr[i].rating;
+        let price = document.createElement("h3");
+        if (arr[0].actual_price == 0) {
+            price.innerText = "Free"
+        }
+        else {
+            price.innerText = "₹" + arr[i].actual_price;
+        }
+
+        div4.append(img, title, teacher, rating, price);
+        div3.append(div4);
+    }
+    let div5 = document.createElement("div");
+    let h22 = document.createElement("h2");
+    h22.innerText = "Popular topics"
+    div5.append(h22);
+    let div6 = document.createElement("div");
+    let b1 = document.createElement("button");
+    b1.innerText = "Python"
+    b1.addEventListener("click", () => {
+        localStorage.setItem("element", "python")
+        localStorage.setItem("category", false);
+        location.href = "products.html";
+    })
+    let b2 = document.createElement("button");
+    b2.innerText = "Javascript"
+    b2.addEventListener("click", () => {
+        localStorage.setItem("element", "javascript")
+        localStorage.setItem("category", false);
+        location.href = "products.html";
+    })
+    let b3 = document.createElement("button");
+    b3.innerText = "Java"
+    b3.addEventListener("click", () => {
+        localStorage.setItem("element", "java")
+        localStorage.setItem("category", false);
+        location.href = "products.html";
+    })
+    let b4 = document.createElement("button");
+    b4.innerText = "Web Development"
+    b4.addEventListener("click", () => {
+        localStorage.setItem("element", "web development")
+        localStorage.setItem("category", false);
+        location.href = "products.html";
+    })
+    let b5 = document.createElement("button");
+    b5.innerText = "C"
+    b5.addEventListener("click", () => {
+        localStorage.setItem("element", "c")
+        localStorage.setItem("category", false);
+        location.href = "products.html";
+    })
+    let b6 = document.createElement("button");
+    b6.innerText = "Data Structure And Algorithms"
+    b6.addEventListener("click", () => {
+        localStorage.setItem("element", "dsa")
+        localStorage.setItem("category", false);
+        location.href = "products.html";
+    })
+
+    div6.append(b1, b2, b3, b4, b5, b6);
+
+    let div7 = document.createElement("div");
+    let h23 = document.createElement("h2");
+    h23.innerText = "Popular Instructors"
+    div7.append(h23);
+    let div8 = document.createElement("div");
+    let div81 = document.createElement("div");
+    let img = document.createElement("img");
+    div81.append(img);
+    let div82 = document.createElement("div");
+    let h3 = document.createElement("h3");
+    let p1 = document.createElement("p");
+    let p2 = document.createElement("p")
+    let h32 = document.createElement("h3");
+    div82.append(h3, p1, p2, h32)
+    div8.append(div81, div82);
+    document.getElementById("show_on_category").append(div1, div2, div3, div5, div6, div7, div8);
+    let index = 0;
+    setInterval(() => {
+        index = index % 3;
+        if (index == 0) {
+            img.src = "https://images.unsplash.com/photo-1491472253230-a044054ca35f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+            h3.innerText = "Master Git and Github in 5 Days"
+            p1.innerText = "Learn and master git and github in just one week and use for future";
+            p2.innerText = "By Jose Portilla"
+            h32.innerText = "₹ 3499";
+        }
+        if (index == 1) {
+            img.src = "https://www.clariontech.com/hubfs/Blog-images/Blog-Image-2.jpg"
+            h3.innerText = "Master ios and design in 5 Days"
+            p1.innerText = "Learn and master ios and design in just one week and use for future";
+            p2.innerText = "By Mark Portilla"
+            h32.innerText = "₹ 3599";
+        }
+        if (index == 2) {
+            img.src = "https://i.pinimg.com/originals/f7/ff/05/f7ff050d950cc53b8584520f52a47fcb.jpg"
+            h3.innerText = "Master python and development in 5 Days"
+            p1.innerText = "Learn and master python and development in just one week and use for future";
+            p2.innerText = "By Elshad paul"
+            h32.innerText = "₹ 3399";
+        }
+        index += 1;
+    }, 2000)
+}
+
 const get_price_filter = (arr, x) => {
     get_rating_filter(arr, x);
     let checkboxes = document.querySelectorAll('.checkbox3');
@@ -242,6 +367,7 @@ function getlecture(arr, x) {
             document.getElementById("product_parent_div").append(div, hr);
             count++;
         })
+        category_showing_fun(arr, x)
     }
 }
 
