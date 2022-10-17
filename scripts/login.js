@@ -14,7 +14,8 @@ function checkuser(e){
 
 
        if(user_e == user_email && user_p == user_password){
-           window.location.href = "home_page.html"
+        localStorage.setItem("logs","true");
+           window.location.href = "index.html"
        }
 
 

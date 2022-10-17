@@ -14,11 +14,49 @@ function signupform(e){
     }
     user_array.push(user)
 
-    var json_user = JSON.stringify(user_array)
-    localStorage.setItem("user_details", json_user)
+    
+    if (
+        user.name === '' ||
+        user.email === '' ||
+        user.password === '' 
+      
+    ) {
+      var p = document.querySelector('#alert');
+      p.innerText = 'Please Fill All The Information !';
+  
+        p.style.color = "red";
+     
+    
+    } else if (!user.email.includes('@') || !user.email.includes('.')) {
+      var p = document.querySelector('#alert');
+      p.innerText = 'Please Fill Correct Email !';
+
+      p.style.color = "red";
+
+      
+    } 
+    
+    else {
+
+        var json_user = JSON.stringify(user_array)
+        localStorage.setItem("user_details", json_user)
 
 
-    window.location.href = "login.html"
+    
+
+    
+      var p = document.querySelector('#alert');
+      p.innerText = '';
+      alert('Sign Up Successful !');
+      window.location.href = "login.html"
+      // console.log(signUpData)
+    }
+
+    // var json_user = JSON.stringify(user_array)
+    // localStorage.setItem("user_details", json_user)
+
+
+    // window.location.href = "login.html"
 
  }
     var sign_btn = document.getElementById("sign-btn")
@@ -32,3 +70,8 @@ function signupform(e){
         sign_btn.style.background = "purple"
     }
     sign_btn.addEventListener("mouseout",changeBackground1)
+
+
+
+
+
