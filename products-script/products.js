@@ -1,32 +1,25 @@
 // url = "https://www.udemy.com/api-2.0/courses/?search=c++/S7gknSy2YudW0StBl7CJ4dyL8gl0qRz0al2nEUUB/ePP7cEF3ebVKIdNt72e8kFgNpkbWjbI1LVsYz1fgEsySWSpeoXOhFQzGLmTVqHABi4l9oJUUIatJXpyoeQ5QpSy1lkBiKKbbAMH7ExBYNF2cP5PQjUuGAE5MGN1I0Awl"
-
-// let arr = [{
-//     image: "https://dev.java/assets/images/java-logo-vert-blk.png",
-//     title: "Java Programming",
-//     description: "Learn Java in this course and become java programmer",
-//     rating: 4.5,
-//     price: 449,
-// }]
-
 // url = "https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0";
 
+
+// localStorage.setItem("Element", "java");
 const getdata = (x) => {
-    if (x == "java") {
+    if (x == "java" || x == "Java") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
             .then((data) => get_price_filter(data.record.java, x));
     }
-    else if (x == "python") {
+    else if (x == "python" || x == "Python" || x == "Machine Learning" || x == "Data Analysis" || x == "Deep Learning" || x == "Artificial Intelligence" || x == "Statistics" || x == "Natural Language Processing") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
             .then((data) => get_price_filter(data.record.python, x));
     }
-    else if (x == "web development") {
+    else if (x == "web development" || x == "Development" || x == "Web Development" || x == "React JS" || x == "CSS" || x == "Angular" || x == "Node JS" || x == "Tpyescript" || x == "HTML5" || x == "Django" || x == "Data Science" || x == "Mobile Development" || x == "Google Flutter" || x == "iOS Development" || x == "Swift" || x == "React Native" || x == "Kotlin" || x == "SwiftUI" || x == "Mobile App Development") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
             .then((data) => get_price_filter(data.record.webdevelopment, x));
     }
-    else if (x == "javascript") {
+    else if (x == "javascript" || x == "JavaScript") {
         fetch(`https://api.jsonbin.io/v3/b/634986f165b57a31e696507c`)
             .then((res) => res.json())
             .then((data) => get_price_filter(data.record.javascript, x));
@@ -44,113 +37,168 @@ const getdata = (x) => {
     else if (x == "dsa" || x == "data structure and algorithms") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
-            .then((data) => get_price_filter(data.record.dsa, x));
+            .then((data) => get_price_filter(data.record.business, x));
     }
 
-    else if (x == "c") {
+    else if (x == "c" || x == "C#" || x == "C") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
             .then((data) => get_price_filter(data.record.c, x));
     }
 
-    else if (x == "c++") {
+    else if (x == "c++" || x == "C++") {
         fetch(`https://api.jsonbin.io/v3/b/6349891b2b3499323bde8ce0`)
             .then((res) => res.json())
             .then((data) => get_price_filter(data.record.cplusplus, x));
     }
+    else if (x == "business" || x == "Entrepreneurship" || x == "Communication" || x == "Management" || x == "Sales" || x == "Operations" || x == "Project Management" || x == "Business Law" || x == "Human Resources" || x == "Industry") {
+        fetch(`https://api.jsonbin.io/v3/b/634e610d2b3499323be26bd8`)
+            .then((res) => res.json())
+            .then((data) => get_price_filter(data.record.buisness, x));
+    }
+    else if (x == "music" || x == "Personal Transformation" || x == "Personal Productivity" || x == "Leadership" || x == "Career Development" || x == "Happiness" || x == "Religion & Sprituality" || x == "Creativity") {
+        fetch(`https://api.jsonbin.io/v3/b/634e610d2b3499323be26bd8`)
+            .then((res) => res.json())
+            .then((data) => get_price_filter(data.record.music, x));
+    }
+    else if (x == "Marketing" || x == "Operations" || x == "Business Law" || x == "Media" || x == "E-Commerce" || x == "Industry" || x == "Real Estate") {
+        fetch(`https://api.jsonbin.io/v3/b/634e610d2b3499323be26bd8`)
+            .then((res) => res.json())
+            .then((data) => get_price_filter(data.record.design, x));
+    }
+    else if (x == "Finance & Accounting" || x == "Accounting & BookKeeping" || x == "Compliance" || x == "Economics" || x == "Finance Cert & Exam Prep" || x == "Finance Modelling & Analysis" || x == "Investing & Trading" || x == "Money Management Tools" || x == "Taxes" || x == "Other Finance and Accounting") {
+        fetch(`https://api.jsonbin.io/v3/b/634e610d2b3499323be26bd8`)
+            .then((res) => res.json())
+            .then((data) => get_price_filter(data.record.finance, x));
+    }
+    else {
+        fetch(`https://api.jsonbin.io/v3/b/634e610d2b3499323be26bd8`)
+            .then((res) => res.json())
+            .then((data) => get_price_filter(data.record.english, x));
+    }
+}
+
+const add_item_cart = (elem) => {
+    let arr = JSON.parse(localStorage.getItem("cart_lectures")) || [];
+    arr.push(elem);
+    localStorage.setItem("cart_lectures", JSON.stringify(arr));
+
+}
+
+const description_element = (elem) => {
+    let arr = [];
+    arr.push(elem);
+    localStorage.setItem("product_description", JSON.stringify(arr));
+    location.href = "pro_desc.html"
 }
 
 const category_showing_fun = (arr, key) => {
     let div1 = document.createElement("div");
+    div1.setAttribute("id", "category_div1")
     let h1 = document.createElement("h1");
     h1.innerText = key;
     div1.append(h1);
     let div2 = document.createElement("div");
+    div2.setAttribute("id", "category_div2")
     let h21 = document.createElement("h2");
     h21.innerText = "courses to get you started";
     div2.append(h21);
     let div3 = document.createElement("div");
+    div3.setAttribute("id", "category_div3")
+
     for (let i = 0; i < 5; i++) {
         let div4 = document.createElement("div");
         let img = document.createElement("img");
         img.src = arr[i].image;
+        img.addEventListener("click", () => {
+            description_element(arr[i]);
+        })
         let title = document.createElement("h3");
         title.innerText = arr[i].title;
         let teacher = document.createElement("p");
         teacher.innerText = arr[i].visible_instructors[0].title;
         let rating = document.createElement("h4");
-        rating.innerText = arr[i].rating;
+        rating.innerText = arr[i].rating + " ★";
         let price = document.createElement("h3");
-        if (arr[0].actual_price == 0) {
+        if (arr[i].actual_price == 0) {
             price.innerText = "Free"
         }
         else {
             price.innerText = "₹" + arr[i].actual_price;
         }
-
-        div4.append(img, title, teacher, rating, price);
+        let cart_btn = document.createElement("button");
+        cart_btn.setAttribute("id", "cart_button");
+        cart_btn.innerText = "Add To Cart"
+        cart_btn.addEventListener("click", function () {
+            add_item_cart(arr[i]);
+        })
+        div4.append(img, title, teacher, rating, price, cart_btn);
         div3.append(div4);
     }
     let div5 = document.createElement("div");
+    div5.setAttribute("id", "category_div5")
     let h22 = document.createElement("h2");
-    h22.innerText = "Popular topics"
+    h22.innerText = "Popular Topics"
     div5.append(h22);
     let div6 = document.createElement("div");
+    div6.setAttribute("id", "category_div6")
     let b1 = document.createElement("button");
     b1.innerText = "Python"
     b1.addEventListener("click", () => {
-        localStorage.setItem("element", "python")
-        localStorage.setItem("category", false);
+        localStorage.setItem("Element", "python")
+        localStorage.setItem("Category", false);
         location.href = "products.html";
     })
     let b2 = document.createElement("button");
     b2.innerText = "Javascript"
     b2.addEventListener("click", () => {
-        localStorage.setItem("element", "javascript")
-        localStorage.setItem("category", false);
+        localStorage.setItem("Element", "javascript")
+        localStorage.setItem("Category", false);
         location.href = "products.html";
     })
     let b3 = document.createElement("button");
     b3.innerText = "Java"
     b3.addEventListener("click", () => {
-        localStorage.setItem("element", "java")
-        localStorage.setItem("category", false);
+        localStorage.setItem("Element", "java")
+        localStorage.setItem("Category", false);
         location.href = "products.html";
     })
     let b4 = document.createElement("button");
     b4.innerText = "Web Development"
     b4.addEventListener("click", () => {
-        localStorage.setItem("element", "web development")
-        localStorage.setItem("category", false);
+        localStorage.setItem("Element", "web development")
+        localStorage.setItem("Category", false);
         location.href = "products.html";
     })
     let b5 = document.createElement("button");
     b5.innerText = "C"
     b5.addEventListener("click", () => {
-        localStorage.setItem("element", "c")
-        localStorage.setItem("category", false);
+        localStorage.setItem("Element", "c")
+        localStorage.setItem("Category", false);
         location.href = "products.html";
     })
     let b6 = document.createElement("button");
     b6.innerText = "Data Structure And Algorithms"
     b6.addEventListener("click", () => {
-        localStorage.setItem("element", "dsa")
-        localStorage.setItem("category", false);
+        localStorage.setItem("Element", "dsa")
+        localStorage.setItem("Category", false);
         location.href = "products.html";
     })
 
     div6.append(b1, b2, b3, b4, b5, b6);
 
     let div7 = document.createElement("div");
+    div7.setAttribute("id", "category_div7");
     let h23 = document.createElement("h2");
     h23.innerText = "Popular Instructors"
     div7.append(h23);
     let div8 = document.createElement("div");
+    div8.setAttribute("id", "category_div8");
     let div81 = document.createElement("div");
     let img = document.createElement("img");
     div81.append(img);
     let div82 = document.createElement("div");
-    let h3 = document.createElement("h3");
+    let h3 = document.createElement("h2");
     let p1 = document.createElement("p");
     let p2 = document.createElement("p")
     let h32 = document.createElement("h3");
@@ -337,6 +385,9 @@ function getlecture(arr, x) {
             div3.setAttribute("id", "price_div")
             let img = document.createElement("img");
             img.src = elem.image;
+            img.addEventListener("click", () => {
+                description_element(elem);
+            })
             let title = document.createElement("h3");
             title.innerText = elem.title;
             let des = document.createElement("p");
@@ -344,8 +395,16 @@ function getlecture(arr, x) {
             let teacher = document.createElement("p");
             teacher.innerText = elem.visible_instructors[0].title;
             let rating = document.createElement("h4");
-            rating.innerText = elem.rating;
+            rating.setAttribute("id", "main_body_rating");
+            rating.innerText = elem.rating + " ★";
             let price = document.createElement("h3");
+            let cart_btn = document.createElement("button");
+            cart_btn.setAttribute("id", "cart_button");
+            cart_btn.innerText = "Add To Cart"
+            cart_btn.addEventListener("click", function () {
+                add_item_cart(elem);
+            })
+            let br = document.createElement("br");
             if (elem.actual_price == 0) {
                 price.innerText = "Free"
             }
@@ -356,10 +415,10 @@ function getlecture(arr, x) {
             if (count % 3 === 0) {
                 let best = document.createElement("button")
                 best.innerText = "Bestseller"
-                div2.append(title, des, teacher, rating, best);
+                div2.append(title, des, teacher, rating, best, br, cart_btn);
             }
             else {
-                div2.append(title, des, teacher, rating);
+                div2.append(title, des, teacher, rating, cart_btn);
             }
             div1.append(img);
             div3.append(price);
@@ -367,11 +426,20 @@ function getlecture(arr, x) {
             document.getElementById("product_parent_div").append(div, hr);
             count++;
         })
-        category_showing_fun(arr, x)
+        let check_cat = localStorage.getItem("Category") || "false";
+        console.log(check_cat);
+        if (check_cat == "false") {
+            console.log(check_cat)
+        }
+        else {
+            localStorage.setItem("Category", "false");
+            category_showing_fun(arr, x)
+        }
     }
 }
+localStorage.setItem("Category", "true")
 
-let x = localStorage.getItem("element");
+let x = localStorage.getItem("Element");
 document.getElementById("lecture_name").innerText = x;
 getdata(x);
 
@@ -409,25 +477,36 @@ filter_button_hide.addEventListener("click", (e) => {
 
 
 document.querySelector(".suggested_topic_button1").addEventListener("click", () => {
-    localStorage.setItem("element", "c");
+    localStorage.setItem("Element", "c");
     location.href = "products.html"
 })
 document.querySelector(".suggested_topic_button2").addEventListener("click", () => {
-    localStorage.setItem("element", "java");
+    localStorage.setItem("Element", "java");
     location.href = "products.html"
 })
 document.querySelector(".suggested_topic_button3").addEventListener("click", () => {
-    localStorage.setItem("element", "python");
+    localStorage.setItem("Element", "python");
     location.href = "products.html"
 })
 document.querySelector(".suggested_topic_button4").addEventListener("click", () => {
-    localStorage.setItem("element", "c++");
+    localStorage.setItem("Element", "c++");
     location.href = "products.html"
 })
 document.querySelector(".suggested_topic_button5").addEventListener("click", () => {
-    localStorage.setItem("element", "web development");
+    localStorage.setItem("Element", "web development");
     location.href = "products.html"
 })
 
 
 //product_description
+
+// navbar............
+
+document.getElementById("input_searched").addEventListener("keypress", (e) => {
+    if (e.keyCode == 13) {
+        let searched_item = document.getElementById("input_searched").value;
+        localStorage.setItem("Element", searched_item);
+        localStorage.setItem("Category", "false");
+        location.href = "products.html";
+    }
+})
