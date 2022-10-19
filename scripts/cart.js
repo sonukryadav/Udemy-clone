@@ -138,7 +138,7 @@ function showInCart() {
     let courseName = data.title;
     let img = data.image;
     let tutor = data.visible_instructors[0].title;
-    let price = data.price;
+    let price = data.actual_price;
     bill += price;
     price = price.toLocaleString("en-US");
     let divC = document.createElement("div");
