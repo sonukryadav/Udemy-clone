@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectures</title>
+    <link rel="stylesheet" href="./products-style/products.css">
+    <link rel="stylesheet" href="./products-style/navbar_page.css">
+</head>
+
+<body>
+
+    <div id="navbar_parent_div">
+        <div>
+            <a href="./index.html"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png"
+                    alt="Udemy_logo"></a>
+        </div>
+        <div>
+            <p id="navbar_category">Category</p>
+        </div>
+        <div>
+            <input type="search" placeholder="Search for anything" id="input_searched">
+        </div>
+        <div>
+            <p>My Learning</p>
+        </div>
+        <div id="cart_image_logo">
+            <a href="./PAGES/cart.html"><img src="https://cdn-icons-png.flaticon.com/512/60/60992.png"
+                    alt="cart_image"></a>
+        </div>
+
+    </div>
+
+    <!-- navbar ....................................  -->
+
+    <div id="show_on_category">
+
+    </div>
+    <div id="array_length">
+        <h1><span id="counts"></span> results for "<span id="lecture_name"></span>"</h1>
+    </div>
+    <button id="filter_button_hide_fun">
+        <h3>Filter</h3>
+    </button>
+    <div id="whole_body">
+        <div id="filter_products">
+            <select id="sorting_lectures">
+                <option value="all">Most Relevant</option>
+                <option value="rated">Highest Rated</option>
+                <option value="low">Price Low-High</option>
+                <option value="high">Price High-Low</option>
+
+            </select>
+            <hr class="hr_tag">
+
+            <details>
+
+                <summary class="summary_filter"> Sub Topic </summary>
+
+
+                <form class="form" id="myfilter">
+                    <input type="checkbox" id="course1" name="course1" class="checkbox" value="java">
+                    <label for="course1">java</label><br>
+                    <input type="checkbox" id="course2" name="course2" class="checkbox" value="c">
+                    <label for="course2">c</label><br>
+                    <input type="checkbox" id="course3" name="course3" class="checkbox" value="web development">
+                    <label for="course3">web development</label><br>
+                    <input type="checkbox" id="course4" name="course4" class="checkbox" value="javascript">
+                    <label for="course4">javascript</label><br>
+                    <span id="show_more_filter">
+                        <input type="checkbox" id="course5" name="course5" class="checkbox" value="html">
+                        <label for="course5">HTML</label><br>
+                        <input type="checkbox" id="course6" name="course6" class="checkbox" value="css">
+                        <label for="course6">CSS</label><br>
+                        <input type="checkbox" id="course7" name="course7" class="checkbox" value="dsa">
+                        <label for="course7">DSA</label><br>
+                        <input type="checkbox" id="course8" name="course8" class="checkbox" value="c++">
+                        <label for="course8">C++</label><br>
+                        <input type="checkbox" id="course9" name="course9" class="checkbox" value="python">
+                        <label for="course9">python</label></span>
+                </form>
+                <h3 id="show_more_button">Show more...</h3>
+            </details>
+            <hr class="hr_tag">
+
+            <details>
+                <summary class="summary_filter"> Level </summary>
+
+                <form class="form">
+                    <input type="checkbox" id="beginner" name="beginner" value="beginner" class="checkbox2">
+                    <label for="beginner">Beginner</label><br>
+                    <input type="checkbox" id="intermediate" name="intermediate" value="intermediate" class="checkbox2">
+                    <label for="intermediate">Intermediate</label><br>
+                    <input type="checkbox" id="expert" name="expert" value="expert" class="checkbox2">
+                    <label for="expert">Expert</label><br>
+                </form>
+            </details>
+            <hr class="hr_tag">
+
+            <details>
+                <summary class="summary_filter"> Price </summary>
+                <form class="form">
+                    <input type="checkbox" id="paid" name="paid" class="checkbox3" value="true">
+                    <label for="paid">Paid</label><br>
+                    <input type="checkbox" id="free" name="free" class="checkbox3" value="false">
+                    <label for="free">Free</label><br>
+                </form>
+            </details>
+            <hr class="hr_tag">
+
+            <details>
+                <summary class="summary_filter"> Rating </summary>
+                <form class="form">
+                    <input type="checkbox" id="4.5" name="4.5" value="4.5" class="checkbox4">
+                    <label for="4.5">4.5 & Above</label><br>
+                    <input type="checkbox" id="4.0" name="4.0" value="4.0" class="checkbox4">
+                    <label for="4.0">4.0 & Above</label><br>
+                    <input type="checkbox" id="3.5" name="3.5" value="3.5" class="checkbox4">
+                    <label for="3.5">3.5 & Above</label><br>
+                    <input type="checkbox" id="3.0" name="3.0" value="3.0" class="checkbox4">
+                    <label for="3.0">3.0 & Above</label><br>
+                </form>
+            </details>
+
+            <hr class="hr_tag">
+
+            <details>
+
+                <summary class="summary_filter"> Duration </summary>
+                <form class="form">
+                    <input type="checkbox" id="1" name="1" value="1" class="checkbox5">
+                    <label for="1">0-1 Hour</label><br>
+                    <input type="checkbox" id="2" name="2" value="2" class="checkbox5">
+                    <label for="2">1-2 Hour</label><br>
+                    <input type="checkbox" id="3" name="3" value="3" class="checkbox5">
+                    <label for="3">2 & Above</label><br>
+                </form>
+            </details>
+        </div>
+        <div id="product_parent_div">
+
+        </div>
+    </div>
+    <div id="suggested_topic">
+        <h2>Suggested searches</h2>
+        <div>
+            <button class="suggested_topic_button1">c</button>
+            <button class="suggested_topic_button2">java</button>
+            <button class="suggested_topic_button3">python</button>
+            <button class="suggested_topic_button4">c++</button>
+            <button class="suggested_topic_button5">web development</button>
+        </div>
+    </div>
+
+
+    <!-- footer ......... -->
+
+    <div id="footer">
+        <div class="flex-bo">
+            <div>
+                <h2>Top companies choose Udemy Business to build in-demand career skills.</h2>
+            </div>
+            <div class="flex-image">
+                <img src="https://s.udemycdn.com/partner-logos/v4/apple-dark.svg" alt="">
+                <img src="https://s.udemycdn.com/partner-logos/v4/box-dark.svg" alt="">
+                <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-dark.svg" alt="">
+                <img src="https://s.udemycdn.com/partner-logos/v4/netflix-dark.svg" alt="">
+                <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-dark.svg" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="final-flex">
+            <div class="footer-link">
+                <div>
+                    <p>Udemy Business</p>
+                </div>
+                <div>
+                    <p>Careers</p>
+                </div>
+                <div>
+                    <p>Terms</p>
+                </div>
+                <div>
+                    <p>Teach on Udemy</p>
+                </div>
+                <div>
+                    <p>Blog</p>
+                </div>
+                <div>
+                    <p>Privacy policy</p>
+                </div>
+                <div>
+                    <p>Get the App</p>
+                </div>
+                <div>
+                    <p>Help and support</p>
+                </div>
+                <div>
+                    <p>Sitemap</p>
+                </div>
+                <div>
+                    <p>About us</p>
+                </div>
+                <div>
+                    <p>Affiliate</p>
+                </div>
+                <div>
+                    <p>Contact us</p>
+                </div>
+            </div>
+
+            <!-- <div class= "glob">
+                        <button id="globe1"><img src="https://cdn0.iconfinder.com/data/icons/mobile-apps-settings-linear-white-with-black-backg/2048/439_-_Browser-256.png"/> 
+                            <span>English</span>
+        
+                         </button>
+                        <div class="clear"></div>
+                    </div> -->
+
+
+        </div>
+
+        <div class="logo-img">
+
+
+            <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="">
+            <div> © 2022 Udemy, Inc</div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
+
+<script src="./products-script/products.js" type="module"></script>
