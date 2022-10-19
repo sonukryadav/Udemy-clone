@@ -86,9 +86,9 @@ const add_item_cart = (elem) => {
 }
 
 const description_element = (elem) => {
-    let arr = [];
-    arr.push(elem);
-    localStorage.setItem("product_description", JSON.stringify(arr));
+    // let arr = [];
+    // arr.push(elem);
+    localStorage.setItem("product_description", JSON.stringify(elem));
     location.href = "pro_desc.html"
 }
 
