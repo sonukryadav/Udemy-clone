@@ -1,0 +1,114 @@
+#navbar_parent_div {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#navbar_parent_div>div img {
+    width: 150px;
+
+}
+
+#cart_image_logo>a>img {
+    width: 30px;
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+#navbar_parent_div input {
+    padding: 13px 20px;
+    font-size: 15px;
+    width: 600px;
+    background-color: rgb(250, 245, 245);
+    border-radius: 30px;
+    margin-top: 5px;
+}
+
+#navbar_parent_div p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#navbar_category {
+    margin-right: 45px;
+}
+
+
+/* footer.......  */
+
+#footer {
+    background-color: rgb(22, 21, 21);
+    margin: 0px;
+    width: 100%;
+    height: 450px;
+    /* border:1px solid black; */
+    margin-top: 5%;
+
+
+}
+
+
+
+.flex-bo {
+    display: flex;
+    flex-direction: row;
+    gap: 8%;
+
+}
+
+.flex-bo h2 {
+    color: white;
+    margin: 6% 4%;
+    font-size: 20px;
+
+    width: 100%;
+    margin-right: 10%
+}
+
+.flex-image {
+    display: flex;
+    flex-direction: row;
+    margin: 1% 2%;
+
+    width: 40%;
+}
+
+.flex-image img {
+    margin: 3%;
+
+}
+
+.logo-img>img {
+    width: 6%;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 3%;
+
+}
+
+.logo-img>div {
+    float: right;
+    color: white;
+    margin-right: 3%;
+}
+
+.footer-link {
+    display: grid;
+    margin: 20px 20px 30px 30px;
+    width: 60%;
+    grid-template-columns: 28% 28% 28%;
+    grid-template-rows: 10% 10% 10% 10% 10%;
+    gap: 5%;
+    color: white;
+    /* border: 3px solid white */
+
+}
+
+.footer-link>div:nth-child(12) {
+    grid-row-start: 5;
+}
+
+.footer-link>div {
+    margin-top: 15px;
+}
