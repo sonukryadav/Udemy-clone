@@ -437,7 +437,7 @@ function getlecture(arr, x) {
         }
     }
 }
-// localStorage.setItem("Category", "true")
+localStorage.setItem("Category", "true")
 
 let x = localStorage.getItem("Element");
 document.getElementById("lecture_name").innerText = x;
