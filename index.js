@@ -953,9 +953,10 @@ loggedIn();
 
 
 // ON LOGIN & SIGN-OUT CHANGE THE NAVBAR---login -login-login------------
-localStorage.setItem("logs", "false");
-let logged = localStorage.getItem('logs');
+// localStorage.setItem("logs", "false");
+let logged = localStorage.getItem('logs') || "false";
 (function () {
+
     if (logged == "true") {
         document.querySelector(".navbarsz-onlogin").style.display = "flex";
         document.querySelector(".navbarsz").style.display = "none";
