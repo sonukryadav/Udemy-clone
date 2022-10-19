@@ -27,7 +27,7 @@ let productDescription = JSON.parse(localStorage.getItem('product_description'))
 
 // console.log(pro_desc.visible_instructors[0].name);
 
-localStorage.setItem('product_description', JSON.stringify(pro_desc));
+// localStorage.setItem('product_description', JSON.stringify(pro_desc));
 
 document.querySelector('.previewBox').style.backgroundImage = `url(${productDescription.image})`;
 
@@ -80,7 +80,7 @@ let cartLectures = JSON.parse(localStorage.getItem('cart_lectures')) || [];
 
 let added = false;
 
-document.querySelector('.crt').onclick = () => { 
+document.querySelector('.crt').onclick = () => {
 
     added = true;
 
@@ -96,25 +96,25 @@ document.querySelector('.crt').onclick = () => {
 document.querySelector('.buy-now').onclick = () => {
 
     if (added) {
-    location.href = './PAGES/cart.html';
+        location.href = './PAGES/cart.html';
     }
     else {
         cartLectures.push(productDescription);
 
-    localStorage.setItem('cart-lectures', JSON.stringify(cartLectures));
+        localStorage.setItem('cart-lectures', JSON.stringify(cartLectures));
         location.href = './PAGES/cart.html';
     }
-    
+
 }
 
 // addToCart.addEventListener('click', () => {
-    
+
 // });
-    
+
 let hidDiv = document.querySelector('.hiddenParent');
 
 document.querySelector('.seeMoreBtn').onclick = () => {
-    
+
     hidDiv.style.display = 'flex';
     document.querySelector('.seeMoreBtn').style.display = 'none';
     document.querySelector('.showLess').style.display = 'block';
@@ -127,7 +127,7 @@ document.querySelector('.showLess').onclick = () => {
 }
 
 
-const preview = () => { 
+const preview = () => {
 
 }
 
@@ -138,8 +138,8 @@ document.querySelector('.showDesc').onclick = () => {
     document.querySelector('.hideDesc').style.display = 'block';
     document.querySelector('.showDesc').style.display = 'none';
 
-    
-    document.querySelector('.hideDesc').onclick = () => { 
+
+    document.querySelector('.hideDesc').onclick = () => {
         document.querySelector('.hideDesc').style.display = 'none';
         document.querySelector('.showDesc').style.display = 'block';
         hiddenDescription.style.display = 'none';
@@ -168,13 +168,13 @@ document.querySelector('.contentBox').onclick = () => {
     document.querySelector('.hiddenContentBox').onclick = () => {
         document.querySelector('.hiddenContent').style.display = 'none';
         document.querySelector('.contentBox').style.display = 'flex';
-    document.querySelector('.hiddenContentBox').style.display = 'none';
+        document.querySelector('.hiddenContentBox').style.display = 'none';
         // localStorage.setItem('clickedBtn', false);
         // dontshow();
 
     }
 
-    
+
 
 }
 
@@ -201,8 +201,8 @@ document.querySelector('.showMoreDivProBtn').onclick = () => {
     document.querySelector('.showLessDivProBtn').style.display = 'block';
     document.querySelector('.showMoreDivProBtn').style.display = 'none';
 
-    
-    document.querySelector('.showLessDivProBtn').onclick = () => { 
+
+    document.querySelector('.showLessDivProBtn').onclick = () => {
         document.querySelector('.showLessDivProBtn').style.display = 'none';
         document.querySelector('.showMoreDivProBtn').style.display = 'block';
         hidDisDescPro.style.display = 'none';

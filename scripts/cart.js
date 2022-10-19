@@ -52,8 +52,8 @@ function check() {
 }
 
 
-function showOnPage(){
-  if(cartTotal==0){
+function showOnPage() {
+  if (cartTotal == 0) {
     check();
     showInCart();
     return;
@@ -78,9 +78,9 @@ localStorage.removeItem("discount");
 
 let cartTotal = JSON.parse(localStorage.getItem("cart_lectures"));
 
-if(cartTotal==null){
+if (cartTotal == null) {
   cartTotal = 0;
-}else{
+} else {
   cartTotal = cartTotal.length;
 }
 let saved = 0;
@@ -128,7 +128,7 @@ localStorage.setItem("coupon", JSON.stringify(arr));
 
 function showInCart() {
   let coursesInCart = JSON.parse(localStorage.getItem("cart_lectures"));
-  
+
   let dest = document.getElementById("cart");
   dest.innerHTML = "";
   let bill = 0;
@@ -157,7 +157,7 @@ function showInCart() {
   totalBill.innerText = bill;
 }
 showOnPage();
-localStorage.setItem("cart_lectures", JSON.stringify(arr));
+// localStorage.setItem("cart_lectures", JSON.stringify(arr));
 let removeBtn = document.getElementsByClassName("rBtn1");
 let courseInCart = document.getElementsByClassName("courseName");
 for (let i = 0; i < removeBtn.length; i++) {
@@ -200,10 +200,10 @@ applyCoupon.addEventListener("click", function (x) {
 
 // searchbar
 document.getElementById("input_searched").addEventListener("keypress", (e) => {
-    if (e.keyCode == 13) {
-        let searched_item = document.getElementById("input_searched").value;
-        localStorage.setItem("Element", searched_item);
-        localStorage.setItem("Category", "false");
-        location.href = "products.html";
-    }
+  if (e.keyCode == 13) {
+    let searched_item = document.getElementById("input_searched").value;
+    localStorage.setItem("Element", searched_item);
+    localStorage.setItem("Category", "false");
+    location.href = "products.html";
+  }
 })
