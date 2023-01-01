@@ -1,15 +1,13 @@
 # Udemy Clone
-This is a Full Stack Clone of the Popular Udemy Website. Checkout the live website at:- [link](https://udemy-clone-front-end.vercel.app)
+This is a Full Stack Clone of the Popular Udemy Website. Checkout the live website at:- [link](https://papaya-empanada-e1f625.netlify.app/#)
 
  ## Tech Stack
  - HTML
  - CSS
- - Java Script
- - React
- - Material UI
- - Node.js
- - Express
- - MongoDB
+ - JavaScript(ES6)
+ - Local storage
+ - API
+ - JSON
 
 ## Description
 
@@ -22,7 +20,7 @@ This is the Landing Page of the Website. Here you can see Courses of different C
  ![product](https://next-js-blog-codebash.s3.us-east-2.amazonaws.com/Screenshot+2022-08-29+at+9.39.52+AM.png)
  
   - ###  Cart Page:-
-  Here all the products added to the cart will be shown. You can delete Produts or View the Total Value of Your Cart.
+  Here all the products added to the cart will be shown. You can delete Products or View the Total Value of Your Cart.
   
   ![cart](https://next-js-blog-codebash.s3.us-east-2.amazonaws.com/Screenshot+2022-08-29+at+10.08.27+AM.png)
 
@@ -31,4 +29,4 @@ This is the Landing Page of the Website. Here you can see Courses of different C
    ## Learning:-
    - Through out this Project My Problem Solving skills Improved a Lot.
    - Learned a Lot about Deployment.
-   - My Code writting style improved a Lot.
+   - My Code writing style improved a Lot.
